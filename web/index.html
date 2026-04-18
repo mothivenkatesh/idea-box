@@ -552,13 +552,7 @@
   }
   .card:focus-visible { outline: none; border-color: var(--brand-500); box-shadow: var(--ring); }
   .card:active { transform: translateY(0); background: var(--surface-gray-1); }
-  .card.stier { border-left: 2px solid var(--brand-500); padding-left: calc(var(--sp-4) - 2px); }
-  .card.stier::before {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, var(--brand-500), transparent 80%);
-    opacity: .6;
-  }
+  /* S-tier cards no longer use a left stripe — the S pill + verdict pill already communicate validation status */
 
   .card-head {
     display: flex; align-items: center; justify-content: space-between; gap: var(--sp-2);
