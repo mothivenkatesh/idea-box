@@ -1,165 +1,277 @@
-# Pain DB
+<div align="center">
 
-A structured database of product / AI-agent pain points, modeled after [ideabrowser.com](https://www.ideabrowser.com/) and [painonsocial.com](https://painonsocial.com/), filtered through a16z's vertical-AI thesis and the Santifer repair-lifecycle architectural pattern.
+# 💡 idea-box
 
-Current seed: **1000 entries** across 24 files. **Roadmap complete.**
+### A structured database of **1,000 real-world pain points** worth building for — with TAM, WTP, incumbents, and AI-cofounder validation scores for the top 50.
+
+<br>
+
+[![Stars](https://img.shields.io/github/stars/mothivenkatesh/idea-box?style=for-the-badge&logo=github&color=FDE047)](https://github.com/mothivenkatesh/idea-box/stargazers)
+[![Forks](https://img.shields.io/github/forks/mothivenkatesh/idea-box?style=for-the-badge&logo=github&color=C7D2FE)](https://github.com/mothivenkatesh/idea-box/network/members)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge)](./LICENSE)
+[![Entries](https://img.shields.io/badge/entries-1%2C000-0289F7?style=for-the-badge)](./data)
+[![S-tier validated](https://img.shields.io/badge/S--tier_validated-50-8247E5?style=for-the-badge)](./data/validations-s-tier.json)
+
+<br>
+
+**[🔎 Live demo](https://mothivenkatesh.github.io/idea-box/web/)** &nbsp;·&nbsp; **[📊 Browse all 1000 entries](./data)** &nbsp;·&nbsp; **[🧠 Schema](./schema.json)** &nbsp;·&nbsp; **[🤝 Contribute](./CONTRIBUTING.md)**
+
+</div>
+
+<br>
+
+---
+
+## The problem this repo solves
+
+Every "startup ideas" list on the internet is vibes. A hundred bullet points. No persona, no TAM, no sources, no reason to believe.
+
+**idea-box is different.** Every entry carries:
+
+- **Who hurts** (persona, not "small businesses")
+- **What hurts** (pain description with frequency)
+- **How much** (severity 1–10, tedium 1–10)
+- **How big** (TAM firms / labor spend / direction)
+- **What they pay now** (WTP at incumbents)
+- **Why incumbents miss** (gap analysis)
+- **Why now** (what infra shift made it buildable)
+- **Sources** — Reddit threads, forums, G2 reviews, vendor case studies
+
+The top 50 by composite score are run through the [AI-cofounder rubric](https://github.com/mothivenkatesh/ai-cofounder) — TAM triangulation (bottom-up · value-based · top-down), unit economics, 8-layer scoring, riskiest assumptions.
+
+> Modeled after [ideabrowser.com](https://www.ideabrowser.com/) + [painonsocial.com](https://painonsocial.com/), filtered through [a16z's vertical-AI thesis](https://a16z.com/vertical-saas-now-with-ai-inside/) and the [Santifer Business OS pattern](https://santifer.io/business-os-for-airtable).
+
+<br>
+
+## What's inside
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 📦 1,000 structured entries
+Across **24 batch files** in [`/data`](./data), organized by theme:
+
+| # | Theme | Entries |
+|---|---|--:|
+| 01 | Repair · home services | 25 |
+| 02 | Marketing · GTM · RevOps | 25 |
+| 03 | Bharat / India (UPI · Zepto · Porter) | 25 |
+| 04 | Diligence · compliance · legal | 25 |
+| 05 | Healthcare / medical | 20 |
+| 06 | Finance · HR · ops · specialty | 30 |
+| 07 | Offbeat niches (FleetPanda · Kula) | 25 |
+| 08 | Reconciliation · automation | 25 |
+| 09 | YC wedges (W25/S25/W26) | 50 |
+| 10 | Reddit r/smallbusiness · r/Entrepreneur | 50 |
+| 11 | International (EU · APAC · MENA · LATAM) | 50 |
+| 12 | Enterprise IT · gaming · climate | 50 |
+| 13 | Business ops deep | 50 |
+| 14 | D2C + e-commerce deep | 50 |
+| 15 | Finance deep | 50 |
+| 16 | Supply chain + logistics | 50 |
+| 17 | Scientific + pharma R&D | 50 |
+| 18 | Specialty professional services | 50 |
+| 19 | Consumer + prosumer | 50 |
+| 20 | AI-native emerging | 50 |
+| 21 | Healthcare adjacent (payer · pharmacy) | 50 |
+| 22 | Public sector / govtech | 50 |
+| 23 | Niche B2B long-tail | 50 |
+| 24 | Final curated | 50 |
+
+</td>
+<td width="50%" valign="top">
+
+### 🔬 50 S-tier validations
+Top opportunities scored on the **AI-cofounder rubric**:
+
+```
+{
+  "verdict": "Conditional pass",
+  "tam_triangulation": {
+    "bottom_up":   { "value_usd": 5000000000 },
+    "value_based": { "value_usd": 6750000000 },
+    "top_down":    { "value_usd": 10000000000 },
+    "convergence": "Strong — within 2×",
+    "sam_usd_mid": 7250000000,
+    "som_usd_1pct": 72500000
+  },
+  "unit_economics": {
+    "acv_usd": 60000,
+    "derived_ltv_usd": 187500,
+    "target_cac_usd": 37500,
+    "target_ltv_cac": 5.0,
+    "implied_payback_mo": 10.0
+  },
+  "layer_scores": { ... },
+  "riskiest_assumptions": [ ... ]
+}
+```
+
+### 🖥 Static browser UI
+[`/web/index.html`](./web) — zero-build, single-file app:
+- Sidebar filters with radio + inline dropdowns
+- Card grid, 10-per-page pagination
+- Keyboard navigation, Lucide icons
+- Frappe Espresso design tokens, Newsreader serif hero
+
+### ⚙ Tooling
+- `scripts/add-pain.py` — CSV → JSON importer with auto opportunity-scoring
+- `scripts/validate-s-tier.py` — batch AI-cofounder rubric runner
+
+</td>
+</tr>
+</table>
+
+<br>
 
 ## Quick start
 
-Open `web/index.html` in a browser — it loads all 8 JSON files and renders a searchable, filterable grid. No build step.
+### 🌐 Browse the data (recommended)
 
-```
-# serve locally (any static server works)
-cd pain-db
+**Live:** [mothivenkatesh.github.io/idea-box/web/](https://mothivenkatesh.github.io/idea-box/web/)
+
+**Or locally:**
+```bash
+git clone https://github.com/mothivenkatesh/idea-box.git
+cd idea-box
 python -m http.server 8000
-# → open http://localhost:8000/web/
+# open http://localhost:8000/web/
 ```
 
-## Schema
+### 🔍 Query the data (jq)
 
-Every entry conforms to `schema.json`. Key fields:
+```bash
+# Top 10 opportunities in Bharat
+jq '[.[] | select(.vertical | test("Bharat"))] | sort_by(-.opportunity_score) | .[0:10]' \
+   data/pains-03-bharat-india.json
+
+# All S-tier Conditional-pass entries
+jq '.[] | select(.ai_cofounder_validation.verdict == "Conditional pass") | .title' \
+   data/validations-s-tier.json
+
+# Count entries by workflow family across the whole corpus
+jq -s 'add | group_by(.workflow_family) | map({family: .[0].workflow_family, n: length})' \
+   data/pains-*.json
+```
+
+### 🐍 Query with Python
+
+```python
+import json, glob
+pains = []
+for f in sorted(glob.glob("data/pains-*.json")):
+    pains.extend(json.load(open(f, encoding="utf-8")))
+
+# Top 20 SMB opportunities with WTP over $200/mo
+top = sorted(
+    [p for p in pains if p.get("current_wtp_usd_month", 0) >= 200 and "smb" in p.get("tags", [])],
+    key=lambda p: -p.get("opportunity_score", 0)
+)[:20]
+```
+
+<br>
+
+## Entry schema (the 20 fields)
+
+Every entry in `data/pains-*.json` conforms to [`schema.json`](./schema.json):
 
 | Field | Type | Notes |
 |---|---|---|
 | `id` | string | `PAIN-NNNN` zero-padded |
-| `title` | string | Short pain title |
+| `title` | string | Short pain-point title |
 | `vertical` | string | Industry label |
-| `workflow_family` | enum | `intake`, `triage_routing`, `extraction_validation`, `outbound_followup`, `transactional_action`, `compliance_audit`, `synthesis_reporting`, `full_lifecycle` |
-| `persona` | string | Target buyer/user |
+| `workflow_family` | enum | 1 of 7: `intake`, `triage_routing`, `extraction_validation`, `outbound_followup`, `transactional_action`, `compliance_audit`, `synthesis_reporting` (+ `full_lifecycle`) |
+| `persona` | string | Target buyer — specific role, not a category |
 | `pain_description` | string | What hurts, in plain language |
-| `pain_severity` | 1-10 | 10 = losing money / compliance risk |
-| `tedium_score` | 1-10 | 10 = pure data entry, prime AI replacement |
-| `tam_firms` | int | Target firms in category |
-| `tam_labor_spend_usd` | number | Annual labor spend in category |
-| `tam_direction` | enum | `rapidly-growing`, `growing`, `stable-growing`, `stable`, `stable-declining`, `declining` |
-| `current_wtp_usd_month` | number | What incumbents charge for nearest tool |
-| `incumbent_tools` | array | Existing SaaS competing in this pain |
-| `incumbent_gap` | string | Why incumbents fail |
+| `pain_severity` | 1–10 | 10 = losing money / regulatory risk |
+| `tedium_score` | 1–10 | 10 = pure data entry, prime AI replacement |
+| `frequency` | string | Human-readable frequency |
+| `tam_firms` | integer | Target firms in category |
+| `tam_labor_spend_usd` | number | Annual labor-spend TAM |
+| `tam_direction` | enum | `rapidly-growing` · `growing` · `stable-growing` · `stable` · `declining` |
+| `current_wtp_usd_month` | number | What incumbents charge today |
+| `incumbent_tools` | array | Existing SaaS competing |
+| `incumbent_gap` | string | Why today's tools fail |
 | `santifer_pattern` | string | One-line solution architecture |
-| `sources` | array | URLs validating the pain |
-| `reference_build` | string | URL of existing build if any |
-| `why_now` | string | What changed to make it buildable |
-| `opportunity_score` | 0-100 | Composite |
-| `tags` | array | Free-form tags |
+| `sources` | array | Validation URLs |
+| `reference_build` | string | Existing build URL (optional) |
+| `why_now` | string | What infra/regulation made it solvable |
+| `opportunity_score` | 0–100 | Composite signal |
 
-Workflow family taxonomy is derived from looking across Sierra, Nurix, Lyzr, ERP-AI, a16z, and Santifer — every deployed vertical-AI use case maps to one of these seven.
+<br>
 
-## Directory layout
+## Who this is for
 
-```
-pain-db/
-├── README.md                                        ← this file
-├── schema.json                                      ← JSON Schema for entries
-├── data/
-│   ├── pains-01-repair-home-services.json          ← 25 entries
-│   ├── pains-02-marketing-gtm-revops.json          ← 25 entries
-│   ├── pains-03-bharat-india.json                  ← 25 entries
-│   ├── pains-04-diligence-compliance-legal.json    ← 25 entries
-│   ├── pains-05-healthcare-medical.json            ← 20 entries
-│   ├── pains-06-finance-hr-ops-specialty.json      ← 30 entries
-│   ├── pains-07-offbeat-niches.json                ← 25 entries
-│   ├── pains-08-reconciliation-automation-pm.json  ← 25 entries
-│   ├── pains-09-yc-wedges.json                     ← 50 entries
-│   ├── pains-10-reddit-threads.json                ← 50 entries
-│   ├── pains-11-international.json                 ← 50 entries
-│   ├── pains-12-enterprise-it-gaming-climate.json  ← 50 entries
-│   ├── pains-13-business-ops-deep.json             ← 50 entries
-│   ├── pains-14-d2c-ecommerce-deep.json            ← 50 entries
-│   ├── pains-15-finance-deep.json                  ← 50 entries
-│   ├── pains-16-supply-chain-logistics.json        ← 50 entries
-│   ├── pains-17-scientific-pharma-rnd.json         ← 50 entries
-│   ├── pains-18-specialty-professional-services.json ← 50 entries
-│   ├── pains-19-consumer-prosumer.json             ← 50 entries
-│   ├── pains-20-ai-native-emerging.json            ← 50 entries
-│   ├── pains-21-healthcare-adjacent.json           ← 50 entries
-│   ├── pains-22-public-sector-govtech.json         ← 50 entries
-│   ├── pains-23-niche-b2b-longtail.json            ← 50 entries
-│   └── pains-24-final-curated.json                 ← 50 entries
-├── web/
-│   └── index.html                                   ← static browser UI
-└── scripts/
-    └── add-pain.py                                  ← append CSV rows as entries
-```
+- **Founders & operators** — sourcing validated ideas, not LinkedIn listicle bait
+- **VCs & angel investors** — a triage layer before you read 200 decks
+- **Product leaders** — discovering adjacent opportunities worth a new SKU
+- **Vertical-AI builders** — mapping labor budgets to agent workflows
+- **Researchers** — who studies "how unsolved ops problems map to buyable software" at scale
 
-## Sources informing the 200 seed entries
+<br>
 
-- [Santifer — Business OS for Airtable / repair lifecycle](https://santifer.io/business-os-for-airtable)
-- [a16z — "AI Inside" opens new markets for VSaaS](https://a16z.com/vsaas-vertical-saas-ai-opens-new-markets/)
-- [a16z — Vertical SaaS with AI Inside](https://a16z.com/vertical-saas-now-with-ai-inside/)
-- [a16z — Rise of Vertical AI in Accounting](https://a16z.com/newsletter/the-rise-of-vertical-ai-in-accounting/)
-- [a16z — Big Ideas 2026 Parts 1-3](https://a16z.com/newsletter/big-ideas-2026-part-1/)
+## Methodology
+
+Entries were synthesized from:
+
+- [Santifer — Business OS for Airtable](https://santifer.io/business-os-for-airtable) (the architectural pattern applied in 200+ entries)
+- [a16z vertical-AI + vertical-SaaS essays](https://a16z.com/vertical-saas-now-with-ai-inside/)
 - [Menlo Ventures — Software Finally Gets to Work](https://menlovc.com/perspective/software-finally-gets-to-work-the-opportunity-in-vertical-ai/)
-- [Activant — Vertical Software Is Having A Moment](https://activantcapital.com/research/vertical-software-is-having-a-moment)
-- [Lyzr case studies](https://www.lyzr.ai/case-studies/) + [101 use cases](https://www.lyzr.ai/template/101-ai-use-cases/)
-- [Sierra — about + customer list](https://sierra.ai/about)
-- [Nurix — use cases](https://www.nurix.ai/resources/ai-agents-use-cases-in-the-real-world)
-- [PainOnSocial — 50+ Vertical SaaS Ideas](https://painonsocial.com/blog/vertical-saas-ideas)
-- [BigIdeasDB — 50 validated micro SaaS ideas](https://bigideasdb.com/micro-saas-ideas-2026)
-- [FleetPanda](https://www.fleetpanda.com/customer-showcase/), [Kula.ai](https://www.kula.ai/product/kula-flows), [Recko/Stripe](https://stripe.com/en-at/newsroom/news/recko)
-- [ChatFin — ERP AI agents](https://chatfin.ai/blog/autonomous-finance-ai-agents-erp-integration-for-oracle-sap-netsuite-2026/)
-- [ServiceTitan — HVAC / plumbing workflows](https://www.servicetitan.com/)
-- [Sarvam AI](https://www.sarvam.ai/), [Rapido](https://en.wikipedia.org/wiki/Rapido_(company)), [Porter](https://inc42.com/startups/porter-intracity-last-mile-delivery-pan-india-logistics-quick-commerce/), [Zepto](https://yourstory.com/2026/04/inside-dark-stores-blinkit-zepto-how-10-minute-delivery-works), [NoBroker](https://www.nobroker.in/tenant-verification)
+- [Lyzr case studies](https://www.lyzr.ai/case-studies/) (101 enterprise use cases)
+- [Sierra.ai customer roster](https://sierra.ai/about) (CX agent deployments)
+- [Nurix AI deployments](https://www.nurix.ai/) (Bharat vernacular agents)
+- [ideabrowser.com](https://www.ideabrowser.com/) + [painonsocial.com](https://painonsocial.com/) formats
+- [BigIdeasDB](https://bigideasdb.com/) 238K-complaint corpus analysis
+- Reddit threads (`r/smallbusiness`, `r/Entrepreneur`, `r/accounting`, `r/nocode`, `r/Airtable`, and ~15 more)
+- G2 / Capterra 2-star review patterns
+- NAICS labor-spend data for TAM triangulation
 
-## Roadmap to 1000 entries
+<br>
 
-Current **400** → target **1000**. Plan:
+## Roadmap
 
-### Phase 2 (partial, done): +200 entries (to 400 total)
-- ✅ YC W25/S25/W26 agent-company wedges (50)
-- ✅ Reddit r/Entrepreneur, r/smallbusiness, r/accounting, r/photography, r/realtors etc. (50)
-- ✅ International: EU, UK, LATAM, APAC, MENA, Africa, Nordic, Israel (50)
-- ✅ Enterprise IT + SOC/FinOps + Gaming + Climate + GovTech (50)
+- [x] **v1.0** — 1,000 entries across 24 batches, top 50 S-tier validated, static browser UI
+- [ ] **v1.1** — richer evidence chains (direct quote extraction from Reddit threads)
+- [ ] **v1.2** — community PRs open, issue templates, GitHub Discussions
+- [ ] **v1.3** — expand S-tier validations to top 100
+- [ ] **v2.0** — BigIdeasDB pattern: automated nightly Reddit pull → new entry candidates
 
-### Phase 2 remainder: +300 entries (to 700 total)
-- **BigIdeasDB pull** — 238K complaints across Reddit/G2/Capterra/Upwork; sample 200 with 8+ validation. Ref: [bigideasdb.com](https://bigideasdb.com/micro-saas-ideas-2026)
-- **PainOnSocial subreddit queries** — systematic pull from r/Entrepreneur, r/smallbusiness, r/accounting, r/construction, r/healthIT with severity scoring. Ref: [painonsocial.com](https://painonsocial.com/)
-- **YC W25/S25/W26 company list** — each yc company = at minimum 1 pain statement (their wedge). ~100 agent companies
+<br>
 
-### Phase 3: +300 entries (to 800)
-- **G2 / Capterra 2-star reviews** — pull top-10 competitors per vertical, scrape negative reviews, extract pain points
-- **LinkedIn — "I wish" posts from operators** — broad pattern of founders/operators articulating gaps
-- **Reddit threads from `r/automation`, `r/Airtable`, `r/nocode`** where people ask "how do I automate X?" — each is a pain
+## Contributing
 
-### Phase 4: +200 entries (to 1000)
-- **Regulatory-driven**: CSRD, SEC 10-K AI disclosures, HIPAA, GDPR enforcement rulings — compliance is a pain-driver
-- **International**: Bharat/SEA/LATAM/Africa specific gaps (UPI, PIX, mobile money, regional languages)
-- **Emerging**: agentic-commerce, on-chain finance, autonomous industry, manufacturing-AI — from a16z Big Ideas 2026 Parts 1-3
+PRs welcome! See [CONTRIBUTING.md](./CONTRIBUTING.md). High-leverage contributions:
 
-## Scoring rubric (opportunity_score)
+1. **Add evidence links** to existing entries (Reddit / forum threads you've seen)
+2. **Fill in `tam_firms` / `tam_labor_spend_usd`** for entries where they're null
+3. **Run `/strategy` or `/ai-cofounder`** validations and submit the output
+4. **Flag dupes** — if you find two entries describing the same pain, open an issue
 
-Composite calculation to rank entries:
+<br>
 
-```
-opportunity_score = min(100, round(
-  (severity * 4) +
-  (tedium * 3) +
-  (tam_direction_weight) +   # rapid=25, growing=15, stable-growing=10, stable=5, declining=-10
-  (wtp_weight)               # >$1000=15, >$300=10, >$100=5, <$100=0
-))
-```
+## Prior art & thanks
 
-Not auto-calculated in seed entries (scored subjectively); to automate, see `scripts/add-pain.py`.
+This repo stands on the shoulders of:
 
-## Adding entries
+- [Santiago Fernández de Valderrama (@santifer)](https://santifer.io/) — the Airtable + n8n + WhatsApp pattern at the heart of 200+ entries
+- [ideabrowser.com](https://www.ideabrowser.com/) by Greg Isenberg — the "Idea of the Day" format
+- [painonsocial.com](https://painonsocial.com/) — Reddit-mined pain-point scoring
+- [BigIdeasDB](https://bigideasdb.com/) — the 238K-complaint validation approach
+- Frappe's [Espresso design system](https://github.com/frappe/frappe-ui) — used to style the browser UI
 
-### Manual
-Add objects to any JSON file in `data/`, or create a new file `pains-NN-topic.json` and add its path to `FILES` in `web/index.html`.
+<br>
 
-### From CSV
-```
-python scripts/add-pain.py input.csv data/pains-09-new-batch.json
-```
-See `scripts/add-pain.py` for the CSV column spec.
+---
 
-## Gaps in current seed
+<div align="center">
 
-- **Enterprise IT / DevOps / security** — covered lightly; add 20-30 more
-- **Gaming / entertainment / media** — 1 entry; underserved
-- **Non-US regulated verticals** — EU / APAC compliance rare
-- **Public sector / govtech (non-India)** — 1 entry
-- **Scientific / academic workflows** — 1 entry
-- **Climate / sustainability / carbon** — 0 entries, growing TAM
+### If idea-box helps you find your next build, a ⭐ means a lot.
 
-## License
+**[⭐ Star the repo](https://github.com/mothivenkatesh/idea-box)** &nbsp;·&nbsp; **[🐙 Open an issue](https://github.com/mothivenkatesh/idea-box/issues/new)** &nbsp;·&nbsp; **[𝕏 Share](https://twitter.com/intent/tweet?text=idea-box%20%E2%80%94%201%2C000%20structured%20pain%20points%20worth%20building%20for.&url=https%3A%2F%2Fgithub.com%2Fmothivenkatesh%2Fidea-box)**
 
-Data is curated from public sources. No warranty. Attribute sources if you republish entries.
+<br>
+
+<sub>MIT-licensed. Built by <a href="https://github.com/mothivenkatesh">@mothivenkatesh</a> with the help of <a href="https://claude.com/claude-code">Claude Code</a>.</sub>
+
+</div>

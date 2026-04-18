@@ -1,0 +1,100 @@
+name: "💡 New pain point"
+description: Propose a new entry for idea-box
+title: "[Pain] <short title>"
+labels: ["new-pain", "triage"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Short title
+      description: e.g. "Phone repair shop - fragmented quote-to-invoice lifecycle"
+    validations:
+      required: true
+
+  - type: input
+    id: vertical
+    attributes:
+      label: Vertical
+      description: Industry label (e.g. "Device Repair", "Veterinary", "BFSI Compliance")
+    validations:
+      required: true
+
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Workflow family
+      options:
+        - intake
+        - triage_routing
+        - extraction_validation
+        - outbound_followup
+        - transactional_action
+        - compliance_audit
+        - synthesis_reporting
+        - full_lifecycle
+    validations:
+      required: true
+
+  - type: input
+    id: persona
+    attributes:
+      label: Persona
+      description: Specific role, not a category. e.g. "1-5 tech repair shop owner"
+    validations:
+      required: true
+
+  - type: textarea
+    id: pain
+    attributes:
+      label: Pain description
+      description: What hurts? Include frequency and what breaks.
+    validations:
+      required: true
+
+  - type: input
+    id: severity
+    attributes:
+      label: Severity (1-10)
+      description: 10 = losing money / regulatory risk
+    validations:
+      required: true
+
+  - type: input
+    id: tedium
+    attributes:
+      label: Tedium (1-10)
+      description: 10 = pure data entry
+    validations:
+      required: true
+
+  - type: input
+    id: wtp
+    attributes:
+      label: Current WTP $/mo
+      description: What target persona pays today for nearest incumbent
+    validations:
+      required: false
+
+  - type: input
+    id: incumbents
+    attributes:
+      label: Incumbent tools
+      description: Comma-separated list
+    validations:
+      required: false
+
+  - type: textarea
+    id: gap
+    attributes:
+      label: Incumbent gap
+      description: Why today's tools fail
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: URLs validating the pain (Reddit, forums, G2 reviews, etc.) - one per line
+    validations:
+      required: true
