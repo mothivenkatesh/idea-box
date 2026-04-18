@@ -1,0 +1,2588 @@
+[
+  {
+    "id": "PAIN-0101",
+    "title": "Medical prior authorization: PDF ping-pong nightmare",
+    "vertical": "Healthcare RCM",
+    "opportunity_score": 97,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": {
+          "calc": "$740.0B annual labor \u00d7 15% AI capture",
+          "value_usd": 111000000000
+        },
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 60000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 187500,
+        "target_cac_usd": 37500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 4,
+        "solution_differentiation": 4,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 29,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 33/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Availity and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0052",
+    "title": "Vernacular customer support for Tier 2/3 India users",
+    "vertical": "CX Bharat",
+    "opportunity_score": 96,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 36000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 112500,
+        "target_cac_usd": 22500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Weak",
+      "verdict_rationale": "Conviction override: a layer scored 1 caps verdict at Weak. Raw normalized 30/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Freshdesk and 3 others can copy if the wedge is clear"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0027",
+    "title": "AI SDR: outbound meeting volume ceiling",
+    "vertical": "B2B Sales",
+    "opportunity_score": 95,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 36000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 112500,
+        "target_cac_usd": 22500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 24,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 27/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Outreach and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0051",
+    "title": "Gig-worker onboarding: KYC + doc verify at scale (Rapido/Zepto/Porter pattern)",
+    "vertical": "Gig Economy Bharat",
+    "opportunity_score": 95,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 60000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 187500,
+        "target_cac_usd": 37500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 1,
+        "solution_differentiation": 4,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 28,
+      "max_possible": 35,
+      "verdict": "Weak",
+      "verdict_rationale": "Conviction override: a layer scored 1 caps verdict at Weak. Raw normalized 32/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: HyperVerge and 3 others can copy if the wedge is clear"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0076",
+    "title": "VC / PE due diligence: data-room synthesis",
+    "vertical": "Private Markets",
+    "opportunity_score": 95,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 120000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 375000,
+        "target_cac_usd": 75000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 28,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 32/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Hebbia and 3 others can copy if the wedge is clear"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0059",
+    "title": "Loan collections for NBFCs/MFIs in vernacular",
+    "vertical": "Lending Bharat",
+    "opportunity_score": 94,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "Fintech",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "Fintech",
+        "acv_usd": 96000,
+        "assumed_gross_margin_pct": 60,
+        "assumed_monthly_churn_pct": 1.0,
+        "derived_ltv_usd": 480000,
+        "target_cac_usd": 120000,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 25.0,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 1,
+        "pnl_viability": 3,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 21,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 24/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Finvolv and 2 others can copy if the wedge is clear",
+        "CAC payback 25.0 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0079",
+    "title": "AML / transaction monitoring: false-positive flood",
+    "vertical": "BFSI Compliance",
+    "opportunity_score": 94,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "Fintech",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "Fintech",
+        "acv_usd": 60000,
+        "assumed_gross_margin_pct": 60,
+        "assumed_monthly_churn_pct": 1.0,
+        "derived_ltv_usd": 300000,
+        "target_cac_usd": 75000,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 25.0,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 1,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 21,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 24/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Actimize and 2 others can copy if the wedge is clear",
+        "CAC payback 25.0 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0026",
+    "title": "ABM account research: hours per account before outreach",
+    "vertical": "B2B Marketing",
+    "opportunity_score": 93,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 1,
+        "solution_differentiation": 4,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 28,
+      "max_possible": 35,
+      "verdict": "Weak",
+      "verdict_rationale": "Conviction override: a layer scored 1 caps verdict at Weak. Raw normalized 32/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: 6sense and 3 others can copy if the wedge is clear"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0058",
+    "title": "UPI dispute + chargeback resolution",
+    "vertical": "Fintech Bharat",
+    "opportunity_score": 93,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "Fintech",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "Fintech",
+        "acv_usd": 120000,
+        "assumed_gross_margin_pct": 60,
+        "assumed_monthly_churn_pct": 1.0,
+        "derived_ltv_usd": 600000,
+        "target_cac_usd": 150000,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 25.0,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 1,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 19,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 22/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: In-house and 2 others can copy if the wedge is clear",
+        "CAC payback 25.0 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0102",
+    "title": "Medical claims denial management",
+    "vertical": "Healthcare RCM",
+    "opportunity_score": 93,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 36000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 112500,
+        "target_cac_usd": 22500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Waystar and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0176",
+    "title": "Marketplace payment reconciliation (Recko pattern)",
+    "vertical": "Marketplace Finance",
+    "opportunity_score": 93,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "Marketplace",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "Marketplace",
+        "acv_usd": 96000,
+        "assumed_gross_margin_pct": 65,
+        "assumed_monthly_churn_pct": 3.0,
+        "derived_ltv_usd": 173333,
+        "target_cac_usd": 57777,
+        "target_ltv_cac": 3.0,
+        "implied_payback_mo": 11.1,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 1,
+        "solution_differentiation": 4,
+        "unit_economics": 4,
+        "pnl_viability": 3,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Weak",
+      "verdict_rationale": "Conviction override: a layer scored 1 caps verdict at Weak. Raw normalized 30/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Recko (Stripe) and 3 others can copy if the wedge is clear"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0001",
+    "title": "Phone/device repair shop: fragmented quote-to-invoice lifecycle",
+    "vertical": "Device Repair",
+    "opportunity_score": 92,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "150,000 firms \u00d7 $2,400/yr ARPU",
+          "value_usd": 360000000
+        },
+        "value_based": {
+          "calc": "150,000 firms \u00d7 $7,200 (3\u00d7 WTP = value signal)",
+          "value_usd": 1080000000
+        },
+        "top_down": {
+          "calc": "150,000 firms \u00d7 $4,800 (incumbent category spend)",
+          "value_usd": 720000000
+        },
+        "convergence": "Divergent \u2014 methods differ 3.0\u00d7; conservative SAM",
+        "sam_usd_mid": 360000000,
+        "som_usd_1pct": 3600000
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 2400,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 9333,
+        "target_cac_usd": 2333,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 3,
+        "solution_differentiation": 4,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 3,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 25,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 29/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: RepairShopr and 3 others can copy if the wedge is clear",
+        "Market growth: TAM marked 'stable-growing' \u2014 expansion may require category-creation",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0056",
+    "title": "GST return filing for MSMEs",
+    "vertical": "MSME Compliance Bharat",
+    "opportunity_score": 92,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "14,000,000 firms \u00d7 $240/yr ARPU",
+          "value_usd": 3360000000
+        },
+        "value_based": {
+          "calc": "14,000,000 firms \u00d7 $720 (3\u00d7 WTP = value signal)",
+          "value_usd": 10080000000
+        },
+        "top_down": {
+          "calc": "14,000,000 firms \u00d7 $480 (incumbent category spend)",
+          "value_usd": 6720000000
+        },
+        "convergence": "Divergent \u2014 methods differ 3.0\u00d7; conservative SAM",
+        "sam_usd_mid": 3360000000,
+        "som_usd_1pct": 33600000
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 240,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 933,
+        "target_cac_usd": 233,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 4,
+        "solution_differentiation": 4,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 27,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 31/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: ClearTax and 2 others can copy if the wedge is clear",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0065",
+    "title": "Health insurance claim intimation + discharge summary",
+    "vertical": "Health Insurance Bharat",
+    "opportunity_score": 92,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "Fintech",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "Fintech",
+        "acv_usd": 120000,
+        "assumed_gross_margin_pct": 60,
+        "assumed_monthly_churn_pct": 1.0,
+        "derived_ltv_usd": 600000,
+        "target_cac_usd": 150000,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 25.0,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 1,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 19,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 22/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: MediAssist and 1 others can copy if the wedge is clear",
+        "CAC payback 25.0 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0077",
+    "title": "M&A diligence: contract anomaly detection",
+    "vertical": "M&A",
+    "opportunity_score": 92,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 96000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 300000,
+        "target_cac_usd": 60000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Kira and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0096",
+    "title": "Financial crime investigation: case narrative writing",
+    "vertical": "BFSI Compliance",
+    "opportunity_score": 92,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "Fintech",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "Fintech",
+        "acv_usd": 48000,
+        "assumed_gross_margin_pct": 60,
+        "assumed_monthly_churn_pct": 1.0,
+        "derived_ltv_usd": 240000,
+        "target_cac_usd": 60000,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 25.0,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 1,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 21,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 24/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Actimize and 2 others can copy if the wedge is clear",
+        "CAC payback 25.0 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0169",
+    "title": "Psychiatry clinical copilot",
+    "vertical": "Mental Healthcare",
+    "opportunity_score": 92,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 3600,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 14000,
+        "target_cac_usd": 3500,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 21,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 24/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: SimplePractice and 1 others can copy if the wedge is clear",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0205",
+    "title": "Autonomous browser agent for 'RPA 2.0'",
+    "vertical": "RPA",
+    "opportunity_score": 92,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 24,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 27/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: UIPath and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0030",
+    "title": "Proposal / RFP response: 10 days per response",
+    "vertical": "B2B Sales",
+    "opportunity_score": 91,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 14400,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 45000,
+        "target_cac_usd": 9000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Loopio and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0053",
+    "title": "Quick-commerce dark store: picker mispick + stockout surprise",
+    "vertical": "Quick Commerce",
+    "opportunity_score": 91,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 27,
+      "max_possible": 35,
+      "verdict": "Weak",
+      "verdict_rationale": "Conviction override: a layer scored 1 caps verdict at Weak. Raw normalized 31/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Native WMS and 2 others can copy if the wedge is clear"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0078",
+    "title": "KYB (Know Your Business) for B2B payments / lending",
+    "vertical": "Fintech",
+    "opportunity_score": 91,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "Fintech",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "Fintech",
+        "acv_usd": 36000,
+        "assumed_gross_margin_pct": 60,
+        "assumed_monthly_churn_pct": 1.0,
+        "derived_ltv_usd": 180000,
+        "target_cac_usd": 45000,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 25.0,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 1,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 19,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 22/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Middesk and 3 others can copy if the wedge is clear",
+        "CAC payback 25.0 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0084",
+    "title": "Contract lifecycle (CLM) for mid-market SaaS",
+    "vertical": "Legal Ops",
+    "opportunity_score": 91,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 18000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 56250,
+        "target_cac_usd": 11250,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Ironclad and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0121",
+    "title": "AP invoice processing: $10 \u2192 $3 per invoice opportunity",
+    "vertical": "Back-Office Finance",
+    "opportunity_score": 91,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 18000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 56250,
+        "target_cac_usd": 11250,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Bill.com and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0005",
+    "title": "Electrical contractor: bidding takeoff manual",
+    "vertical": "Electrical",
+    "opportunity_score": 90,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 6000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 18750,
+        "target_cac_usd": 3750,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 27,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 31/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: PlanSwift and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0028",
+    "title": "CRM hygiene: 40% of records stale or wrong",
+    "vertical": "RevOps",
+    "opportunity_score": 90,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 18000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 56250,
+        "target_cac_usd": 11250,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: ZoomInfo and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0115",
+    "title": "Medical coding review (HCC / MS-DRG)",
+    "vertical": "Healthcare RCM",
+    "opportunity_score": 90,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: 3M 360 and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0136",
+    "title": "Customer support ticket triage at scale",
+    "vertical": "Customer Support",
+    "opportunity_score": 90,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 18000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 56250,
+        "target_cac_usd": 11250,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Zendesk AI and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0352",
+    "title": "SIEM alert fatigue + playbook execution",
+    "vertical": "SOC",
+    "opportunity_score": 90,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 60000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 187500,
+        "target_cac_usd": 37500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 2,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 25,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 29/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Splunk and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0003",
+    "title": "HVAC shop: dispatch by gut, no per-job P&L",
+    "vertical": "HVAC",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "120,000 firms \u00d7 $4,800/yr ARPU",
+          "value_usd": 576000000
+        },
+        "value_based": {
+          "calc": "$39.4B annual labor \u00d7 15% AI capture",
+          "value_usd": 5910000000
+        },
+        "top_down": {
+          "calc": "120,000 firms \u00d7 $9,600 (incumbent category spend)",
+          "value_usd": 1152000000
+        },
+        "convergence": "Divergent \u2014 methods differ 10.3\u00d7; conservative SAM",
+        "sam_usd_mid": 576000000,
+        "som_usd_1pct": 5760000
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 4800,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 18666,
+        "target_cac_usd": 4666,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 3,
+        "market_size": 4,
+        "solution_differentiation": 4,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 25,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 29/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: ServiceTitan and 3 others can copy if the wedge is clear",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0054",
+    "title": "Intra-city goods matching: SME shipper \u2192 driver (Porter pattern)",
+    "vertical": "Logistics Bharat",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "2,000,000 firms \u00d7 $600/yr ARPU",
+          "value_usd": 1200000000
+        },
+        "value_based": {
+          "calc": "2,000,000 firms \u00d7 $1,800 (3\u00d7 WTP = value signal)",
+          "value_usd": 3600000000
+        },
+        "top_down": {
+          "calc": "2,000,000 firms \u00d7 $1,200 (incumbent category spend)",
+          "value_usd": 2400000000
+        },
+        "convergence": "Divergent \u2014 methods differ 3.0\u00d7; conservative SAM",
+        "sam_usd_mid": 1200000000,
+        "som_usd_1pct": 12000000
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 600,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 2333,
+        "target_cac_usd": 583,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 4,
+        "solution_differentiation": 4,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 28,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 32/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Porter and 2 others can copy if the wedge is clear",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0099",
+    "title": "Pharmacovigilance: adverse event case processing",
+    "vertical": "Pharma Safety",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 48000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 150000,
+        "target_cac_usd": 30000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Oracle Argus and 1 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing",
+        "Regulatory risk: compliance-heavy vertical, liability if AI hallucinates; human-in-loop required"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0103",
+    "title": "Physician documentation: burnout from SOAP notes",
+    "vertical": "Healthcare",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 3600,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 14000,
+        "target_cac_usd": 3500,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 23,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 26/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Abridge and 3 others can copy if the wedge is clear",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0114",
+    "title": "Clinical trial patient matching + recruitment",
+    "vertical": "Clinical Trials",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 60000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 187500,
+        "target_cac_usd": 37500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Deep 6 AI and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0134",
+    "title": "IT service desk: password resets, access provisioning",
+    "vertical": "IT Ops",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 18000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 56250,
+        "target_cac_usd": 11250,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: ServiceNow and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0242",
+    "title": "Agent evals + monitoring in prod",
+    "vertical": "AI Infra",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 6000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 18750,
+        "target_cac_usd": 3750,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 2,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 23,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 26/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: LangSmith and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0303",
+    "title": "CSRD sustainability reporting for EU mid-market",
+    "vertical": "EU ESG",
+    "opportunity_score": 89,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 24,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 27/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Watershed and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0002",
+    "title": "Auto repair shop: quote-parts-tech-invoice desync",
+    "vertical": "Auto Repair",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "280,000 firms \u00d7 $3,600/yr ARPU",
+          "value_usd": 1008000000
+        },
+        "value_based": {
+          "calc": "280,000 firms \u00d7 $10,800 (3\u00d7 WTP = value signal)",
+          "value_usd": 3024000000
+        },
+        "top_down": {
+          "calc": "280,000 firms \u00d7 $7,200 (incumbent category spend)",
+          "value_usd": 2016000000
+        },
+        "convergence": "Divergent \u2014 methods differ 3.0\u00d7; conservative SAM",
+        "sam_usd_mid": 1008000000,
+        "som_usd_1pct": 10080000
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 3600,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 14000,
+        "target_cac_usd": 3500,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 2,
+        "solution_differentiation": 4,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 2,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 4,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 22,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 25/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Tekmetric and 3 others can copy if the wedge is clear",
+        "Market growth: TAM marked 'stable' \u2014 expansion may require category-creation",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0023",
+    "title": "Cannabis dispensary: seed-to-sale + state tracking",
+    "vertical": "Cannabis Retail",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "D2C",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "D2C",
+        "acv_usd": 6000,
+        "assumed_gross_margin_pct": 50,
+        "assumed_monthly_churn_pct": 5.0,
+        "derived_ltv_usd": 5000,
+        "target_cac_usd": 1666,
+        "target_ltv_cac": 3.0,
+        "implied_payback_mo": 6.7,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 4,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 22,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 25/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Dutchie and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing",
+        "Regulatory risk: compliance-heavy vertical, liability if AI hallucinates; human-in-loop required"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0035",
+    "title": "Deal-desk + pricing approvals: days per quote",
+    "vertical": "RevOps",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Salesforce CPQ and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0057",
+    "title": "Kirana store digitization: inventory + UPI + credit book",
+    "vertical": "Kirana / Local Retail",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "D2C",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "13,000,000 firms \u00d7 $96/yr ARPU",
+          "value_usd": 1248000000
+        },
+        "value_based": {
+          "calc": "13,000,000 firms \u00d7 $288 (3\u00d7 WTP = value signal)",
+          "value_usd": 3744000000
+        },
+        "top_down": {
+          "calc": "13,000,000 firms \u00d7 $192 (incumbent category spend)",
+          "value_usd": 2496000000
+        },
+        "convergence": "Divergent \u2014 methods differ 3.0\u00d7; conservative SAM",
+        "sam_usd_mid": 1248000000,
+        "som_usd_1pct": 12480000
+      },
+      "unit_economics": {
+        "model_type": "D2C",
+        "acv_usd": 96,
+        "assumed_gross_margin_pct": 50,
+        "assumed_monthly_churn_pct": 5.0,
+        "derived_ltv_usd": 80,
+        "target_cac_usd": 26,
+        "target_ltv_cac": 3.0,
+        "implied_payback_mo": 6.7,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 4,
+        "solution_differentiation": 3,
+        "unit_economics": 4,
+        "pnl_viability": 3,
+        "market_timing_moat": 5,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Khatabook and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0082",
+    "title": "Vendor security questionnaire responses (SIG, CAIQ)",
+    "vertical": "Security Compliance",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 9600,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 30000,
+        "target_cac_usd": 6000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: SafeBase and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing",
+        "Regulatory risk: compliance-heavy vertical, liability if AI hallucinates; human-in-loop required"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0098",
+    "title": "Clinical trial regulatory docs (IND/CTA/site docs)",
+    "vertical": "Clinical Trials",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 60000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 187500,
+        "target_cac_usd": 37500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Veeva and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing",
+        "Regulatory risk: compliance-heavy vertical, liability if AI hallucinates; human-in-loop required"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0106",
+    "title": "Dental office: insurance + recall + intake fragmented",
+    "vertical": "Dental",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "200,000 firms \u00d7 $7,200/yr ARPU",
+          "value_usd": 1440000000
+        },
+        "value_based": {
+          "calc": "200,000 firms \u00d7 $21,600 (3\u00d7 WTP = value signal)",
+          "value_usd": 4320000000
+        },
+        "top_down": {
+          "calc": "200,000 firms \u00d7 $14,400 (incumbent category spend)",
+          "value_usd": 2880000000
+        },
+        "convergence": "Divergent \u2014 methods differ 3.0\u00d7; conservative SAM",
+        "sam_usd_mid": 1440000000,
+        "som_usd_1pct": 14400000
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 7200,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 22500,
+        "target_cac_usd": 4500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 4,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 27,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 31/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Dentrix and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0107",
+    "title": "Veterinary clinic: multi-species EHR + reminders",
+    "vertical": "Veterinary",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": {
+          "calc": "28,000 firms \u00d7 $8,400/yr ARPU",
+          "value_usd": 235200000
+        },
+        "value_based": {
+          "calc": "$13.8B annual labor \u00d7 15% AI capture",
+          "value_usd": 2070000000
+        },
+        "top_down": {
+          "calc": "28,000 firms \u00d7 $16,800 (incumbent category spend)",
+          "value_usd": 470400000
+        },
+        "convergence": "Divergent \u2014 methods differ 8.8\u00d7; conservative SAM",
+        "sam_usd_mid": 235200000,
+        "som_usd_1pct": 2352000
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 8400,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 26250,
+        "target_cac_usd": 5250,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 4,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 27,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 31/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Cornerstone and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0123",
+    "title": "Month-end close: 10-day close \u2192 3-day target",
+    "vertical": "Finance",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: BlackLine and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0130",
+    "title": "In-house recruiting: passive candidate sourcing",
+    "vertical": "Talent Acquisition",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 7200,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 22500,
+        "target_cac_usd": 4500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 26,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 30/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: LinkedIn Recruiter and 3 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0152",
+    "title": "AI-native ATS: passive candidate multi-channel engagement (Kula pattern)",
+    "vertical": "Recruiting Tech",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 7200,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 22500,
+        "target_cac_usd": 4500,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 5,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 27,
+      "max_possible": 35,
+      "verdict": "Conditional pass",
+      "verdict_rationale": "2-3 gaps block commitment. Normalized 31/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: Greenhouse and 4 others can copy if the wedge is clear"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0167",
+    "title": "Bio / life science image analysis (Alchemy pattern)",
+    "vertical": "Life Sciences",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B SaaS",
+      "stage": "pattern_validated",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B SaaS",
+        "acv_usd": 24000,
+        "assumed_gross_margin_pct": 75,
+        "assumed_monthly_churn_pct": 2.0,
+        "derived_ltv_usd": 75000,
+        "target_cac_usd": 15000,
+        "target_ltv_cac": 5.0,
+        "implied_payback_mo": 10.0,
+        "green_flag": true
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 5,
+        "pnl_viability": 4,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 24,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 27/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Aiforia and 2 others can copy if the wedge is clear",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0185",
+    "title": "Multi-location home services: ServiceTitan alternative for mid-size",
+    "vertical": "Home Services",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 2400,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 9333,
+        "target_cac_usd": 2333,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 3,
+        "solution_differentiation": 3,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 23,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 26/40.",
+      "conviction_override": null,
+      "riskiest_assumptions": [
+        "Incumbent response: ServiceTitan and 3 others can copy if the wedge is clear",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  },
+  {
+    "id": "PAIN-0206",
+    "title": "Phone-call AI: replace human answering services",
+    "vertical": "Voice Services",
+    "opportunity_score": 88,
+    "ai_cofounder_validation": {
+      "run_date": "2026-04-18",
+      "idea_type": "B2B Vertical",
+      "stage": "idea",
+      "tam_triangulation": {
+        "bottom_up": null,
+        "value_based": null,
+        "top_down": null,
+        "convergence": null,
+        "sam_usd_mid": null,
+        "som_usd_1pct": null
+      },
+      "unit_economics": {
+        "model_type": "B2B Vertical",
+        "acv_usd": 2400,
+        "assumed_gross_margin_pct": 70,
+        "assumed_monthly_churn_pct": 1.5,
+        "derived_ltv_usd": 9333,
+        "target_cac_usd": 2333,
+        "target_ltv_cac": 4.0,
+        "implied_payback_mo": 16.7,
+        "green_flag": false
+      },
+      "layer_scores": {
+        "problem_clarity": 4,
+        "market_size": 1,
+        "solution_differentiation": 3,
+        "unit_economics": 3,
+        "pnl_viability": 3,
+        "market_timing_moat": 4,
+        "founder_fit": "N/A (no founder profile)",
+        "execution_kill_risk": 3,
+        "traction_pmf": "N/A (pre-product)"
+      },
+      "raw_total": 21,
+      "max_possible": 35,
+      "verdict": "Fragile",
+      "verdict_rationale": "Core assumptions unvalidated. Normalized 24/40.",
+      "conviction_override": "Conviction override: a layer scored 1 caps verdict at Weak",
+      "riskiest_assumptions": [
+        "Incumbent response: Ruby Receptionists and 1 others can copy if the wedge is clear",
+        "CAC payback 16.7 mo exceeds SaaS benchmark; pricing or channel economics need validation",
+        "Evidence depth: <5 validation sources \u2014 run customer interviews before committing"
+      ]
+    }
+  }
+]

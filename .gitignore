@@ -1,0 +1,40 @@
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# Node (in case of future additions)
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Secrets / local env
+.env
+.env.local
+.env.*.local
+
+# Local-only scratch
+data/s-tier-ids.txt

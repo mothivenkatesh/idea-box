@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pain-db.local/schemas/pain.schema.json",
+  "title": "Pain Point",
+  "description": "A single structured pain-point / use-case entry. Modeled after ideabrowser.com, painonsocial.com, Santifer repair-lifecycle, and a16z vertical-AI framing.",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "vertical",
+    "workflow_family",
+    "persona",
+    "pain_description",
+    "pain_severity",
+    "tedium_score",
+    "tam_direction",
+    "current_wtp_usd_month",
+    "santifer_pattern"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^PAIN-[0-9]{4}$",
+      "description": "Zero-padded ID, e.g. PAIN-0001"
+    },
+    "title": {
+      "type": "string",
+      "description": "Short descriptive title of the pain"
+    },
+    "vertical": {
+      "type": "string",
+      "description": "Industry / vertical label (e.g. 'Device Repair', 'Veterinary', 'HVAC', 'SMB Legal')"
+    },
+    "workflow_family": {
+      "type": "string",
+      "enum": [
+        "intake",
+        "triage_routing",
+        "extraction_validation",
+        "outbound_followup",
+        "transactional_action",
+        "compliance_audit",
+        "synthesis_reporting",
+        "full_lifecycle"
+      ],
+      "description": "Which of the 7 workflow families this pain maps to (plus 'full_lifecycle' for Santifer-style bundles)"
+    },
+    "persona": {
+      "type": "string",
+      "description": "Target buyer / user"
+    },
+    "pain_description": {
+      "type": "string",
+      "description": "Plain-language description of what hurts"
+    },
+    "pain_severity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "How acute the pain is (1=mild, 10=losing money / compliance risk)"
+    },
+    "tedium_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "How boring/repetitive the task is (10=pure data entry, prime AI replacement)"
+    },
+    "frequency": {
+      "type": "string",
+      "description": "Human-readable frequency, e.g. 'dozens/day per shop'"
+    },
+    "tam_firms": {
+      "type": "integer",
+      "description": "Estimated number of target firms (null if unknown)"
+    },
+    "tam_labor_spend_usd": {
+      "type": "number",
+      "description": "Annual labor spend in USD across the category (null if unknown)"
+    },
+    "tam_direction": {
+      "type": "string",
+      "enum": ["rapidly-growing", "growing", "stable-growing", "stable", "stable-declining", "declining"],
+      "description": "Is the TAM expanding or shrinking?"
+    },
+    "current_wtp_usd_month": {
+      "type": "number",
+      "description": "What target persona pays today for nearest incumbent, per seat or per firm per month (USD)"
+    },
+    "incumbent_tools": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Existing SaaS / tools serving this pain"
+    },
+    "incumbent_gap": {
+      "type": "string",
+      "description": "Why incumbents fail (rigid, expensive, no AI, fragmented, etc.)"
+    },
+    "santifer_pattern": {
+      "type": "string",
+      "description": "One-line solution architecture: Airtable/SSOT + automation + AI agent + channels"
+    },
+    "evidence_count": {
+      "type": "integer",
+      "description": "How many independent sources (Reddit threads, G2 reviews, forum posts) validate this pain"
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "description": "URLs validating the pain (Reddit, forums, blog posts, case studies)"
+    },
+    "reference_build": {
+      "type": "string",
+      "description": "URL of existing real-world build of this pattern, if any"
+    },
+    "why_now": {
+      "type": "string",
+      "description": "What changed recently that makes this buildable (LLM cost, WhatsApp API, regulation, etc.)"
+    },
+    "opportunity_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Composite score: severity * tedium * TAM direction * WTP, normalized 0-100"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-form tags (e.g. 'whatsapp', 'voice', 'b2b', 'smb', 'enterprise', 'regulated')"
+    }
+  }
+}
