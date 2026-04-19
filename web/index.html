@@ -749,6 +749,191 @@
   .close:active { transform: scale(.92); }
   .close:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(130,71,229,.35); }
 
+  /* ============  JTBD fields — prospects / velocity / buying intent / kill risks / fermi  ============ */
+  .jtbd-list { display: flex; flex-direction: column; gap: var(--sp-2); margin-top: var(--sp-2); }
+
+  /* Prospect cards */
+  .prospect-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--sp-2) var(--sp-3);
+    align-items: start;
+    padding: var(--sp-3) var(--sp-4);
+    background: var(--surface-gray-1);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+  }
+  .prospect-card .prospect-head {
+    grid-column: 1 / -1;
+    display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap;
+  }
+  .prospect-name { font-size: 13px; font-weight: 600; color: var(--text); }
+  .prospect-name a { color: var(--brand-600); }
+  .prospect-type {
+    font-family: var(--font-mono); font-size: 9px; font-weight: 500;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 2px var(--sp-2); border-radius: var(--r-sm);
+    background: var(--surface-3); color: var(--text-muted);
+    border: 1px solid var(--line);
+  }
+  .prospect-type.company, .prospect-type.founder { background: var(--brand-50); color: var(--brand-700); border-color: var(--brand-100); }
+  .prospect-type.subreddit, .prospect-type.forum, .prospect-type.discord,
+  .prospect-type.facebook_group, .prospect-type.linkedin_group, .prospect-type.slack_community { background: var(--amber-50); color: var(--amber-600); border-color: rgba(180,83,9,.18); }
+  .prospect-type.association { background: var(--good-bg); color: var(--good); border-color: rgba(21,128,61,.18); }
+  .prospect-size {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .prospect-reach {
+    grid-column: 1 / -1;
+    font-size: 12px; color: var(--text-2); line-height: 1.5;
+  }
+  .prospect-reach strong { color: var(--text); font-weight: 600; }
+
+  /* Velocity banner */
+  .velocity-card {
+    padding: var(--sp-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ink-gray-3);
+    border-radius: var(--r-md);
+    display: flex; flex-direction: column; gap: var(--sp-2);
+  }
+  .velocity-card.accelerating_fast { border-left-color: var(--good); background: var(--good-bg); }
+  .velocity-card.accelerating      { border-left-color: var(--good); }
+  .velocity-card.flat              { border-left-color: var(--warn); }
+  .velocity-card.cooling           { border-left-color: var(--bad); }
+  .velocity-head {
+    display: flex; align-items: center; gap: var(--sp-2);
+    font-family: var(--font-mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: .08em; font-weight: 600;
+  }
+  .velocity-head.accelerating_fast, .velocity-head.accelerating { color: var(--good); }
+  .velocity-head.flat    { color: var(--warn); }
+  .velocity-head.cooling { color: var(--bad); }
+  .velocity-head [data-lucide] { width: 14px; height: 14px; }
+  .velocity-evidence { font-size: 13px; color: var(--text); line-height: 1.5; }
+  .velocity-meta {
+    display: flex; flex-wrap: wrap; gap: var(--sp-2);
+    font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);
+    padding-top: var(--sp-2); border-top: 1px dashed var(--line);
+  }
+  .velocity-meta .label { color: var(--text-subtle); }
+  .velocity-meta strong { color: var(--text); font-weight: 600; }
+
+  /* Buying-intent cards */
+  .intent-card {
+    display: flex; flex-direction: column; gap: var(--sp-2);
+    padding: var(--sp-3) var(--sp-4);
+    background: var(--brand-50);
+    border: 1px solid var(--brand-100);
+    border-radius: var(--r-md);
+  }
+  .intent-head {
+    display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap;
+  }
+  .intent-pill {
+    font-family: var(--font-mono); font-size: 9px; font-weight: 600;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 2px var(--sp-2); border-radius: var(--r-sm);
+    background: var(--brand-500); color: #fff;
+  }
+  .intent-pill.churning_from_incumbent { background: var(--amber-600); }
+  .intent-pill.willing_to_pay_stated { background: var(--good); }
+  .intent-pill.asking_recommendation { background: var(--brand-600); }
+  .intent-pill.actively_evaluating { background: var(--brand-700); }
+  .intent-pill.waitlist_signal { background: var(--amber-500); }
+  .intent-pill.funding_announcement { background: var(--good-bg); color: var(--good); border: 1px solid rgba(21,128,61,.3); }
+  .intent-quote {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 13px; color: var(--text); line-height: 1.55; font-style: italic;
+  }
+  .intent-quote::before { content: "\201C"; color: var(--brand-500); font-size: 20px; margin-right: 2px; line-height: 0; vertical-align: -4px; }
+  .intent-quote::after  { content: "\201D"; color: var(--brand-500); font-size: 20px; margin-left: 2px;  line-height: 0; vertical-align: -4px; }
+  .intent-meta {
+    display: flex; align-items: center; gap: var(--sp-2);
+    font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);
+  }
+  .intent-meta a { color: var(--brand-700); }
+
+  /* Kill-risk cards */
+  .risk-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--sp-2) var(--sp-3);
+    align-items: start;
+    padding: var(--sp-3) var(--sp-4);
+    background: var(--surface-gray-1);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+  }
+  .risk-card.kill      { background: var(--bad-bg);  border-color: rgba(185,28,28,.25); }
+  .risk-card.serious   { background: var(--warn-bg); border-color: rgba(180,83,9,.22); }
+  .risk-card.manageable { background: var(--surface-gray-1); }
+  .risk-severity {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .risk-severity.kill      { background: var(--bad); color: #fff; }
+  .risk-severity.serious   { background: var(--warn); color: #fff; }
+  .risk-severity.manageable { background: var(--ink-gray-3); color: var(--text); }
+  .risk-body { display: flex; flex-direction: column; gap: 4px; }
+  .risk-title { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+  .risk-status {
+    font-size: 12px; color: var(--text-2); line-height: 1.5;
+  }
+  .risk-status .label {
+    font-family: var(--font-mono); font-size: 9px; font-weight: 500;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--text-subtle);
+    margin-right: 4px;
+  }
+
+  /* Fermi math card */
+  .fermi-card {
+    padding: var(--sp-4);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    display: flex; flex-direction: column; gap: var(--sp-3);
+  }
+  .fermi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--sp-3);
+  }
+  .fermi-metric {
+    display: flex; flex-direction: column; gap: 2px;
+    padding: var(--sp-2) var(--sp-3);
+    background: var(--surface-gray-1);
+    border-radius: var(--r-sm);
+  }
+  .fermi-metric .label {
+    font-family: var(--font-mono); font-size: 9px; font-weight: 500;
+    color: var(--text-subtle); letter-spacing: .08em; text-transform: uppercase;
+  }
+  .fermi-metric .value {
+    font-family: var(--font-mono); font-size: 15px; font-weight: 600;
+    color: var(--text); font-variant-numeric: tabular-nums;
+  }
+  .fermi-verdict {
+    display: inline-flex; align-items: center; gap: var(--sp-1);
+    padding: 4px var(--sp-3); border-radius: var(--r-pill);
+    font-size: 11px; font-weight: 700; align-self: flex-start;
+  }
+  .fermi-verdict.clears_bar        { background: var(--good-bg); color: var(--good); border: 1px solid rgba(21,128,61,.22); }
+  .fermi-verdict.tight_but_possible { background: var(--warn-bg); color: var(--warn); border: 1px solid rgba(180,83,9,.22); }
+  .fermi-verdict.math_does_not_work { background: var(--bad-bg); color: var(--bad); border: 1px solid rgba(185,28,28,.22); }
+  .fermi-verdict [data-lucide] { width: 12px; height: 12px; }
+  .fermi-notes {
+    font-size: 12px; color: var(--text-2); line-height: 1.55;
+    padding-top: var(--sp-2); border-top: 1px dashed var(--line);
+  }
+
   /* Verbatim quotes — real user complaints from Reddit / forums / reviews */
   .quotes-block {
     display: flex; flex-direction: column; gap: var(--sp-3);
@@ -1374,6 +1559,140 @@ function openModal(p) {
     ['Tags',            chipList(p.tags)]
   ];
 
+  /* ---- JTBD fields: prospects, velocity, buying intent, kill risks, fermi ---- */
+  const prospects = Array.isArray(p.specific_prospects) ? p.specific_prospects : [];
+  const velocity = p.velocity_signal && typeof p.velocity_signal === 'object' ? p.velocity_signal : null;
+  const buying = Array.isArray(p.buying_intent_evidence) ? p.buying_intent_evidence : [];
+  const risks = Array.isArray(p.kill_risks) ? p.kill_risks : [];
+  const fermi = p.fermi_math_to_50k && typeof p.fermi_math_to_50k === 'object' ? p.fermi_math_to_50k : null;
+  const hasJtbd = prospects.length || velocity || buying.length || risks.length || fermi;
+
+  const VELOCITY_ICON = { accelerating_fast: 'rocket', accelerating: 'trending-up', flat: 'minus', cooling: 'trending-down' };
+  const VELOCITY_LABEL = { accelerating_fast: 'Accelerating fast', accelerating: 'Accelerating', flat: 'Flat', cooling: 'Cooling' };
+  const INTENT_LABEL = {
+    asking_recommendation: 'Asking for recommendation',
+    actively_evaluating: 'Actively evaluating',
+    willing_to_pay_stated: 'WTP stated',
+    churning_from_incumbent: 'Churning from incumbent',
+    waitlist_signal: 'Waitlist signal',
+    funding_announcement: 'Funding announcement'
+  };
+  const VERDICT_FERMI_ICON = { clears_bar: 'badge-check', tight_but_possible: 'triangle-alert', math_does_not_work: 'circle-x' };
+  const VERDICT_FERMI_LABEL = { clears_bar: 'Clears the $50K MRR bar', tight_but_possible: 'Tight but possible', math_does_not_work: 'Math does not work' };
+
+  function renderProspects() {
+    if (!prospects.length) return '';
+    return `
+      <h3 class="section-title"><i data-lucide="users"></i>Specific prospects you could reach today <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${prospects.length}</span></h3>
+      <div class="jtbd-list">
+        ${prospects.map(pr => {
+          const typeCls = (pr.type || '').replace(/[^a-z_]/g, '');
+          const nameEl = pr.url
+            ? `<span class="prospect-name"><a href="${esc(pr.url)}" target="_blank" rel="noopener">${esc(pr.name||'')} <i data-lucide="external-link"></i></a></span>`
+            : `<span class="prospect-name">${esc(pr.name||'')}</span>`;
+          return `
+            <div class="prospect-card">
+              <div class="prospect-head">
+                ${nameEl}
+                <span class="prospect-type ${typeCls}">${esc(pr.type||'—').replace(/_/g,' ')}</span>
+              </div>
+              ${pr.signal_size ? `<div class="prospect-size">${esc(pr.signal_size)}</div>` : '<div></div>'}
+              ${pr.why_reachable ? `<div class="prospect-reach"><strong>Reach:</strong> ${esc(pr.why_reachable)}</div>` : ''}
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  function renderVelocity() {
+    if (!velocity || !velocity.direction) return '';
+    const dir = velocity.direction;
+    const icon = VELOCITY_ICON[dir] || 'activity';
+    const label = VELOCITY_LABEL[dir] || dir;
+    return `
+      <h3 class="section-title"><i data-lucide="gauge"></i>Velocity signal</h3>
+      <div class="velocity-card ${dir}">
+        <div class="velocity-head ${dir}"><i data-lucide="${icon}"></i>${esc(label)}</div>
+        ${velocity.evidence ? `<div class="velocity-evidence">${esc(velocity.evidence)}</div>` : ''}
+        <div class="velocity-meta">
+          ${velocity.trigger       ? `<span><span class="label">Trigger:</span> <strong>${esc(velocity.trigger)}</strong></span>` : ''}
+          ${velocity.window_months ? `<span><span class="label">Lead:</span> <strong>${esc(velocity.window_months)} mo</strong></span>` : ''}
+          ${velocity.freshness_date ? `<span><span class="label">Verified:</span> <strong>${esc(velocity.freshness_date)}</strong></span>` : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderBuying() {
+    if (!buying.length) return '';
+    return `
+      <h3 class="section-title"><i data-lucide="shopping-cart"></i>Buying-intent signals <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${buying.length}</span></h3>
+      <div class="jtbd-list">
+        ${buying.map(b => {
+          const t = (b.intent_type || '').replace(/[^a-z_]/g, '');
+          return `
+            <div class="intent-card">
+              <div class="intent-head">
+                <span class="intent-pill ${t}">${esc(INTENT_LABEL[t] || t.replace(/_/g,' '))}</span>
+                ${b.source_label ? `<span style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted)">${esc(b.source_label)}</span>` : ''}
+                ${b.date ? `<span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle)">${esc(b.date)}</span>` : ''}
+              </div>
+              <p class="intent-quote">${esc(b.quote||'')}</p>
+              ${b.source_url ? `<div class="intent-meta"><a href="${esc(b.source_url)}" target="_blank" rel="noopener">source <i data-lucide="external-link"></i></a></div>` : ''}
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  function renderRisks() {
+    if (!risks.length) return '';
+    const SEV_LETTER = { kill: 'K', serious: 'S', manageable: 'M' };
+    return `
+      <h3 class="section-title"><i data-lucide="shield-alert"></i>Kill risks <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${risks.length}</span></h3>
+      <div class="jtbd-list">
+        ${risks.map(r => {
+          const sev = (r.severity || 'manageable').replace(/[^a-z]/g, '');
+          return `
+            <div class="risk-card ${sev}">
+              <div class="risk-severity ${sev}" title="${esc(sev)}">${SEV_LETTER[sev]||'?'}</div>
+              <div class="risk-body">
+                <div class="risk-title">${esc(r.risk||'')}</div>
+                ${r.current_status ? `<div class="risk-status"><span class="label">Status:</span>${esc(r.current_status)}</div>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  function renderFermi() {
+    if (!fermi) return '';
+    const v = (fermi.verdict || '').replace(/[^a-z_]/g, '');
+    const fmtNum = n => (n == null) ? '—' : Number(n).toLocaleString();
+    const fmtPct = n => (n == null) ? '—' : `${n}%`;
+    const fmtMoney = n => (n == null) ? '—' : `$${Number(n).toLocaleString()}`;
+    return `
+      <h3 class="section-title"><i data-lucide="calculator"></i>Fermi math to $50K MRR</h3>
+      <div class="fermi-card">
+        ${v ? `<span class="fermi-verdict ${v}"><i data-lucide="${VERDICT_FERMI_ICON[v]||'circle'}"></i>${esc(VERDICT_FERMI_LABEL[v]||v)}</span>` : ''}
+        <div class="fermi-grid">
+          <div class="fermi-metric"><span class="label">Reachable SOM</span><span class="value">${fmtNum(fermi.reachable_som_firms)} firms</span></div>
+          <div class="fermi-metric"><span class="label">Conv. rate</span><span class="value">${fmtPct(fermi.expected_conversion_pct)}</span></div>
+          <div class="fermi-metric"><span class="label">Anchor price</span><span class="value">${fmtMoney(fermi.anchor_price_usd_month)}/mo</span></div>
+          <div class="fermi-metric"><span class="label">Customers @ $50K</span><span class="value">${fmtNum(fermi.paying_customers_for_50k)}</span></div>
+          <div class="fermi-metric"><span class="label">Time to $50K</span><span class="value">${fermi.months_to_50k_at_realistic_pace ? fermi.months_to_50k_at_realistic_pace + ' mo' : '—'}</span></div>
+        </div>
+        ${fermi.notes ? `<div class="fermi-notes">${esc(fermi.notes)}</div>` : ''}
+      </div>
+    `;
+  }
+
+  const jtbdHtml = [renderProspects(), renderVelocity(), renderBuying(), renderRisks(), renderFermi()].join('');
+
   const quotes = Array.isArray(p.verbatim_quotes) ? p.verbatim_quotes : [];
   let quotesHtml = '';
   if (quotes.length) {
@@ -1434,6 +1753,7 @@ function openModal(p) {
     <h2 id="modalTitle">${esc(p.title)}</h2>
     <h3 class="section-title"><i data-lucide="file-text"></i>Details</h3>
     <table class="kv"><tbody>${baseRows.map(([l,val]) => `<tr><th>${l}</th><td>${val||'—'}</td></tr>`).join('')}</tbody></table>
+    ${jtbdHtml}
     ${quotesHtml}
     ${validationHtml}
   `;

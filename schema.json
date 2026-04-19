@@ -137,6 +137,73 @@
       "maximum": 100,
       "description": "Composite score: severity * tedium * TAM direction * WTP, normalized 0-100"
     },
+    "specific_prospects": {
+      "type": "array",
+      "description": "Named people / companies / communities you could reach today. Not 'small repair shops' — 'Drew at iCare Repairs, 214 reviews'. Forces the entry to be actionable instead of abstract.",
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "url"],
+        "properties": {
+          "name":          { "type": "string", "description": "Real name — company, founder, subreddit, Discord, forum" },
+          "type":          { "type": "string", "enum": ["company", "founder", "subreddit", "forum", "discord", "facebook_group", "linkedin_group", "association", "slack_community"] },
+          "url":           { "type": "string", "format": "uri" },
+          "signal_size":   { "type": "string", "description": "Concrete size — '2.1M subs', '40 techs, Series A', '314 complaints 2024-2026'" },
+          "why_reachable": { "type": "string", "description": "The actual outreach vector — founder LinkedIn, subreddit DM culture, listed email, industry-conference list" }
+        }
+      }
+    },
+    "velocity_signal": {
+      "type": "object",
+      "description": "Is this pain ACCELERATING? Static TAM is dead evidence. Forces the entry to show lead-time, not just size.",
+      "properties": {
+        "direction":       { "type": "string", "enum": ["accelerating_fast", "accelerating", "flat", "cooling"] },
+        "evidence":        { "type": "string", "description": "Concrete observation — 'r/priorauth grew 3.2x (8K→26K subs) 2024-2026'" },
+        "trigger":         { "type": "string", "description": "What caused the acceleration — new API, regulation, cost crash, platform unlock" },
+        "window_months":   { "type": "integer", "description": "Estimated months of lead-time before mass competition enters" },
+        "freshness_date":  { "type": "string", "description": "YYYY-MM when this signal was last verified" }
+      }
+    },
+    "buying_intent_evidence": {
+      "type": "array",
+      "description": "Quotes/threads where someone explicitly asks for a solution or says they'd pay. BUYING signals, not complaint signals. 'What should I use?' beats 'this sucks' 10:1.",
+      "items": {
+        "type": "object",
+        "required": ["quote", "intent_type", "source_url"],
+        "properties": {
+          "quote":        { "type": "string" },
+          "intent_type":  { "type": "string", "enum": ["asking_recommendation", "actively_evaluating", "willing_to_pay_stated", "churning_from_incumbent", "waitlist_signal", "funding_announcement"] },
+          "source_url":   { "type": "string", "format": "uri" },
+          "source_label": { "type": "string" },
+          "date":         { "type": "string" }
+        }
+      }
+    },
+    "kill_risks": {
+      "type": "array",
+      "description": "The 3-5 things that would have to be true for this NOT to work. If any are already true, walk away.",
+      "items": {
+        "type": "object",
+        "required": ["risk", "severity", "current_status"],
+        "properties": {
+          "risk":           { "type": "string", "description": "What could kill this" },
+          "severity":       { "type": "string", "enum": ["kill", "serious", "manageable"] },
+          "current_status": { "type": "string", "description": "Is this risk active / dormant / resolved? Cite evidence if known." }
+        }
+      }
+    },
+    "fermi_math_to_50k": {
+      "type": "object",
+      "description": "Explicit arithmetic path from $0 to $50K MRR. If the math doesn't clear the bar, the entry should be cut.",
+      "properties": {
+        "reachable_som_firms":          { "type": "integer", "description": "Firms you could plausibly get in front of in year 1 — not TAM, not SAM. The real funnel entry." },
+        "expected_conversion_pct":      { "type": "number", "description": "Plausible paid-conversion rate. 1-3% is realistic for cold B2B; 0.3-1% for consumer." },
+        "anchor_price_usd_month":       { "type": "number", "description": "What you'd charge per account per month — anchored to incumbent pricing or value delivered." },
+        "paying_customers_for_50k":     { "type": "integer", "description": "Derived: 50000 / anchor_price_usd_month (rounded up)." },
+        "months_to_50k_at_realistic_pace": { "type": "integer" },
+        "verdict":                      { "type": "string", "enum": ["clears_bar", "tight_but_possible", "math_does_not_work"] },
+        "notes":                        { "type": "string" }
+      }
+    },
     "tags": {
       "type": "array",
       "items": { "type": "string" },
