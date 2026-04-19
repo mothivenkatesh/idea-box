@@ -38,3 +38,6 @@ build/
 
 # Local-only scratch
 data/s-tier-ids.txt
+
+# Claude Code preview config (local-only)
+.claude/

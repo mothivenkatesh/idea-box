@@ -165,6 +165,7 @@ Every entry in `data/pains-*.json` has these fields. No acronyms here — what i
 | `incumbent_gap` | Why today's tools fail them | Your wedge |
 | `santifer_pattern` | A one-line solution sketch | Starting point, not a spec |
 | `sources` | Reddit threads, forums, reviews | Evidence, not opinion |
+| `verbatim_quotes` | Real user complaints pulled from those threads — quoted as written, with author handle + date | The hook that sells the pain: someone's actual words, not your paraphrase |
 | `reference_build` | A live implementation of the pattern (if any) | Proof it can be done |
 | `why_now` | What changed to make this buildable | The catalyst for today |
 | `opportunity_score` | Composite 0–100 signal | Sort on this, then read the details |
@@ -253,7 +254,7 @@ If you found this through any of them, go ⭐ them too.
 ## Roadmap
 
 - [x] **v1.0** — 1,000 entries, top 50 deep-validated, live browser
-- [ ] **v1.1** — verbatim quotes from Reddit/forum threads attached to each entry
+- [x] **v1.1** — `verbatim_quotes` field on the schema, real quotes seeded for the 50 S-tier entries, empty slots on the other 950 for community fill-in
 - [ ] **v1.2** — open contributions via PR + issue templates
 - [ ] **v1.3** — deep-validation expanded to top 100
 - [ ] **v2.0** — automated pipeline: nightly Reddit pull → candidate entries → human review

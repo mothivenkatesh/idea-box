@@ -749,6 +749,56 @@
   .close:active { transform: scale(.92); }
   .close:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(130,71,229,.35); }
 
+  /* Verbatim quotes — real user complaints from Reddit / forums / reviews */
+  .quotes-block {
+    display: flex; flex-direction: column; gap: var(--sp-3);
+    margin-top: var(--sp-2);
+  }
+  .quote-card {
+    position: relative;
+    padding: var(--sp-4) var(--sp-4) var(--sp-4) var(--sp-5);
+    background: var(--surface-gray-1);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brand-500);
+    border-radius: var(--r-md);
+  }
+  .quote-text {
+    margin: 0 0 var(--sp-2);
+    font-family: var(--font-serif);
+    font-size: 14px; font-weight: 400;
+    color: var(--text); line-height: 1.55;
+    font-style: italic;
+  }
+  .quote-text::before { content: "\201C"; color: var(--brand-400); font-size: 22px; margin-right: 2px; font-family: var(--font-serif); line-height: 0; vertical-align: -4px; }
+  .quote-text::after  { content: "\201D"; color: var(--brand-400); font-size: 22px; margin-left: 2px;  font-family: var(--font-serif); line-height: 0; vertical-align: -4px; }
+  .quote-meta {
+    display: flex; align-items: center; gap: var(--sp-2);
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+  .quote-meta a {
+    display: inline-flex; align-items: center; gap: 4px;
+    color: var(--brand-600); font-weight: 500;
+    text-decoration: none;
+  }
+  .quote-meta a:hover { color: var(--brand-700); text-decoration: underline; text-underline-offset: 3px; }
+  .quote-meta a [data-lucide] { width: 11px; height: 11px; }
+  .quote-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-gray-3); display: inline-block; }
+  .quote-meta .handle { color: var(--text-2); font-weight: 500; }
+  .quote-empty {
+    padding: var(--sp-4);
+    background: var(--surface-gray-1);
+    border: 1px dashed var(--line);
+    border-radius: var(--r-md);
+    font-size: 12px; color: var(--text-muted);
+    display: flex; align-items: center; gap: var(--sp-2);
+  }
+  .quote-empty [data-lucide] { width: 14px; height: 14px; color: var(--text-subtle); }
+  .quote-empty a { color: var(--brand-600); font-weight: 500; }
+
   .verdict-banner {
     display: inline-flex; align-items: center; gap: var(--sp-1);
     padding: 4px var(--sp-3); border-radius: var(--r-pill);
@@ -1324,6 +1374,33 @@ function openModal(p) {
     ['Tags',            chipList(p.tags)]
   ];
 
+  const quotes = Array.isArray(p.verbatim_quotes) ? p.verbatim_quotes : [];
+  let quotesHtml = '';
+  if (quotes.length) {
+    quotesHtml = `
+      <h3 class="section-title"><i data-lucide="quote"></i>Verbatim from the field <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${quotes.length} ${quotes.length===1?'quote':'quotes'}</span></h3>
+      <div class="quotes-block">
+        ${quotes.map(q => {
+          const handle = q.author_handle ? `<span class="handle">${esc(q.author_handle)}</span>` : '';
+          const date = q.date ? `<span>${esc(q.date)}</span>` : '';
+          const label = q.source_label ? `<span>${esc(q.source_label)}</span>` : '';
+          const link = q.source_url ? `<a href="${esc(q.source_url)}" target="_blank" rel="noopener">source <i data-lucide="external-link"></i></a>` : '';
+          const bits = [label, handle, date, link].filter(Boolean);
+          const meta = bits.map((b,i) => i === 0 ? b : `<span class="dot"></span>${b}`).join('');
+          return `<div class="quote-card"><p class="quote-text">${esc(q.quote||'')}</p><div class="quote-meta">${meta}</div></div>`;
+        }).join('')}
+      </div>
+    `;
+  } else {
+    quotesHtml = `
+      <h3 class="section-title"><i data-lucide="quote"></i>Verbatim from the field</h3>
+      <div class="quote-empty">
+        <i data-lucide="message-square-plus"></i>
+        <span>No verbatim quotes yet. <a href="https://github.com/mothivenkatesh/idea-box/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute one</a> — paste a Reddit / forum / G2 quote that validates this pain.</span>
+      </div>
+    `;
+  }
+
   let validationHtml = '';
   if (v) {
     const tam = v.tam_triangulation || {};
@@ -1357,6 +1434,7 @@ function openModal(p) {
     <h2 id="modalTitle">${esc(p.title)}</h2>
     <h3 class="section-title"><i data-lucide="file-text"></i>Details</h3>
     <table class="kv"><tbody>${baseRows.map(([l,val]) => `<tr><th>${l}</th><td>${val||'—'}</td></tr>`).join('')}</tbody></table>
+    ${quotesHtml}
     ${validationHtml}
   `;
   document.getElementById('modal').classList.add('open');

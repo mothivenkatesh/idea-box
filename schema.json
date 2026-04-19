@@ -108,6 +108,21 @@
       "items": { "type": "string", "format": "uri" },
       "description": "URLs validating the pain (Reddit, forums, blog posts, case studies)"
     },
+    "verbatim_quotes": {
+      "type": "array",
+      "description": "Verbatim user complaints pulled from public Reddit/forum/review threads — real words from the persona, not paraphrase",
+      "items": {
+        "type": "object",
+        "required": ["quote", "source_url", "source_label"],
+        "properties": {
+          "quote":         { "type": "string", "description": "Verbatim text. Quoted as written; ellipses for elisions." },
+          "source_url":    { "type": "string", "format": "uri", "description": "Direct URL to the thread / review / post" },
+          "source_label":  { "type": "string", "description": "Human-readable source, e.g. 'r/smallbusiness', 'G2 review', 'Rossmann Group forum'" },
+          "author_handle": { "type": "string", "description": "Public handle of the author as displayed (Reddit username, reviewer name). Omit if anonymous." },
+          "date":          { "type": "string", "description": "Post date YYYY-MM or YYYY-MM-DD if known" }
+        }
+      }
+    },
     "reference_build": {
       "type": "string",
       "description": "URL of existing real-world build of this pattern, if any"
