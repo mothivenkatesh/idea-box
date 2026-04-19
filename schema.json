@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://pain-db.local/schemas/pain.schema.json",
   "title": "Pain Point",
-  "description": "A single structured pain-point / use-case entry. Modeled after ideabrowser.com, painonsocial.com, Santifer repair-lifecycle, and a16z vertical-AI framing.",
+  "description": "One structured pain-point entry. Each entry answers who hurts, how badly, how many of them exist, what they pay today, why today's tools miss them, and whether a builder could plausibly reach $50,000 in monthly revenue. Inspired by ideabrowser.com, painonsocial.com, the Santifer repair-shop case study, and a16z / Menlo Ventures writing on vertical AI.",
   "type": "object",
   "required": [
     "id",
@@ -21,15 +21,15 @@
     "id": {
       "type": "string",
       "pattern": "^PAIN-[0-9]{4}$",
-      "description": "Zero-padded ID, e.g. PAIN-0001"
+      "description": "Stable ID like PAIN-0001."
     },
     "title": {
       "type": "string",
-      "description": "Short descriptive title of the pain"
+      "description": "One-line headline of the pain."
     },
     "vertical": {
       "type": "string",
-      "description": "Industry / vertical label (e.g. 'Device Repair', 'Veterinary', 'HVAC', 'SMB Legal')"
+      "description": "Industry label. For example: Device Repair, Veterinary, HVAC, Legal for small businesses."
     },
     "workflow_family": {
       "type": "string",
@@ -43,135 +43,135 @@
         "synthesis_reporting",
         "full_lifecycle"
       ],
-      "description": "Which of the 7 workflow families this pain maps to (plus 'full_lifecycle' for Santifer-style bundles)"
+      "description": "One of seven kinds of operational work this pain falls under. 'full_lifecycle' covers Santifer-style end-to-end bundles."
     },
     "persona": {
       "type": "string",
-      "description": "Target buyer / user"
+      "description": "The specific role who feels the pain and would pay to fix it. Be specific. Not 'small businesses' but 'HVAC shop owner with 5 to 30 technicians'."
     },
     "pain_description": {
       "type": "string",
-      "description": "Plain-language description of what hurts"
+      "description": "Plain-language description of what breaks, written in the persona's voice."
     },
     "pain_severity": {
       "type": "integer",
       "minimum": 1,
       "maximum": 10,
-      "description": "How acute the pain is (1=mild, 10=losing money / compliance risk)"
+      "description": "How painful this is. 1 is a minor annoyance. 10 is losing money or triggering regulatory risk."
     },
     "tedium_score": {
       "type": "integer",
       "minimum": 1,
       "maximum": 10,
-      "description": "How boring/repetitive the task is (10=pure data entry, prime AI replacement)"
+      "description": "How repetitive the task is. 10 is pure copy-paste data entry. High tedium is the strongest signal for AI replacement."
     },
     "frequency": {
       "type": "string",
-      "description": "Human-readable frequency, e.g. 'dozens/day per shop'"
+      "description": "How often the pain happens, in human terms. For example: 'dozens of times a day per shop'."
     },
     "tam_firms": {
       "type": "integer",
-      "description": "Estimated number of target firms (null if unknown)"
+      "description": "Estimated number of target companies in the market. Null if unknown. Used for bottom-up market sizing."
     },
     "tam_labor_spend_usd": {
       "type": "number",
-      "description": "Annual labor spend in USD across the category (null if unknown)"
+      "description": "Total annual labor cost in this market, in US dollars. Null if unknown. Frames the pain as a labor-budget opportunity, not an IT-budget one."
     },
     "tam_direction": {
       "type": "string",
       "enum": ["rapidly-growing", "growing", "stable-growing", "stable", "stable-declining", "declining"],
-      "description": "Is the TAM expanding or shrinking?"
+      "description": "Is this market getting bigger or smaller?"
     },
     "current_wtp_usd_month": {
       "type": "number",
-      "description": "What target persona pays today for nearest incumbent, per seat or per firm per month (USD)"
+      "description": "What the target customer pays today, per account per month, to the nearest existing tool. In US dollars. Anchors your pricing ceiling."
     },
     "incumbent_tools": {
       "type": "array",
       "items": { "type": "string" },
-      "description": "Existing SaaS / tools serving this pain"
+      "description": "Existing tools and SaaS products already serving this pain."
     },
     "incumbent_gap": {
       "type": "string",
-      "description": "Why incumbents fail (rigid, expensive, no AI, fragmented, etc.)"
+      "description": "Why today's tools fail these customers. Too rigid, too expensive, not AI-native, fragmented across systems, etc."
     },
     "santifer_pattern": {
       "type": "string",
-      "description": "One-line solution architecture: Airtable/SSOT + automation + AI agent + channels"
+      "description": "One-line solution sketch. Typically: single source of truth (Airtable) + automation (n8n, Make) + AI agent + conversational channels (WhatsApp, voice)."
     },
     "evidence_count": {
       "type": "integer",
-      "description": "How many independent sources (Reddit threads, G2 reviews, forum posts) validate this pain"
+      "description": "How many independent sources (Reddit threads, G2 reviews, forum posts) back up this pain."
     },
     "sources": {
       "type": "array",
       "items": { "type": "string", "format": "uri" },
-      "description": "URLs validating the pain (Reddit, forums, blog posts, case studies)"
+      "description": "URLs that back up the pain: Reddit threads, forum posts, G2 / Capterra reviews, case studies, industry reports."
     },
     "verbatim_quotes": {
       "type": "array",
-      "description": "Verbatim user complaints pulled from public Reddit/forum/review threads — real words from the persona, not paraphrase",
+      "description": "Real words from real users pulled from public Reddit, forum, or review threads. Quoted exactly as written. No paraphrasing.",
       "items": {
         "type": "object",
         "required": ["quote", "source_url", "source_label"],
         "properties": {
-          "quote":         { "type": "string", "description": "Verbatim text. Quoted as written; ellipses for elisions." },
-          "source_url":    { "type": "string", "format": "uri", "description": "Direct URL to the thread / review / post" },
-          "source_label":  { "type": "string", "description": "Human-readable source, e.g. 'r/smallbusiness', 'G2 review', 'Rossmann Group forum'" },
-          "author_handle": { "type": "string", "description": "Public handle of the author as displayed (Reddit username, reviewer name). Omit if anonymous." },
-          "date":          { "type": "string", "description": "Post date YYYY-MM or YYYY-MM-DD if known" }
+          "quote":         { "type": "string", "description": "Exact text of the complaint. Use '...' to show you skipped words." },
+          "source_url":    { "type": "string", "format": "uri", "description": "Direct link to the thread, review, or post." },
+          "source_label":  { "type": "string", "description": "Human-readable source name. For example: 'r/smallbusiness', 'G2 review', 'Rossmann Group forum'." },
+          "author_handle": { "type": "string", "description": "Public handle of the author (Reddit username, reviewer name). Leave empty if the author is anonymous." },
+          "date":          { "type": "string", "description": "Post date in YYYY-MM or YYYY-MM-DD format if known." }
         }
       }
     },
     "reference_build": {
       "type": "string",
-      "description": "URL of existing real-world build of this pattern, if any"
+      "description": "URL of an existing working example of this solution pattern, if one exists."
     },
     "why_now": {
       "type": "string",
-      "description": "What changed recently that makes this buildable (LLM cost, WhatsApp API, regulation, etc.)"
+      "description": "What changed recently that makes this buildable now. A cost crash (LLMs), a new API (WhatsApp Business), or a new regulation."
     },
     "opportunity_score": {
       "type": "integer",
       "minimum": 0,
       "maximum": 100,
-      "description": "Composite score: severity * tedium * TAM direction * WTP, normalized 0-100"
+      "description": "Composite 0-100 score combining pain severity, tedium, market direction, and what customers pay today."
     },
     "specific_prospects": {
       "type": "array",
-      "description": "Named people / companies / communities you could reach today. Not 'small repair shops' — 'Drew at iCare Repairs, 214 reviews'. Forces the entry to be actionable instead of abstract.",
+      "description": "Named, reachable people, companies, and communities you could contact today. Not 'repair shop owners' but 'Drew at iCare Repairs, Durham NC'. This is what makes an entry actionable rather than abstract.",
       "items": {
         "type": "object",
         "required": ["name", "type", "url"],
         "properties": {
-          "name":          { "type": "string", "description": "Real name — company, founder, subreddit, Discord, forum" },
+          "name":          { "type": "string", "description": "The real name: a company, founder, subreddit, Discord server, or industry forum." },
           "type":          { "type": "string", "enum": ["company", "founder", "subreddit", "forum", "discord", "facebook_group", "linkedin_group", "association", "slack_community"] },
-          "url":           { "type": "string", "format": "uri" },
-          "signal_size":   { "type": "string", "description": "Concrete size — '2.1M subs', '40 techs, Series A', '314 complaints 2024-2026'" },
-          "why_reachable": { "type": "string", "description": "The actual outreach vector — founder LinkedIn, subreddit DM culture, listed email, industry-conference list" }
+          "url":           { "type": "string", "format": "uri", "description": "Direct URL to the profile, community, or website." },
+          "signal_size":   { "type": "string", "description": "How big this audience is. For example: '2.1M subscribers', '40 technicians, Series A', '314 complaints in 2024-2026'." },
+          "why_reachable": { "type": "string", "description": "How you would actually reach them. Founder's public LinkedIn, subreddit where DMs are common, listed email address, industry conference attendee list." }
         }
       }
     },
     "velocity_signal": {
       "type": "object",
-      "description": "Is this pain ACCELERATING? Static TAM is dead evidence. Forces the entry to show lead-time, not just size.",
+      "description": "Is this pain growing, flat, or shrinking right now? A static market size doesn't tell you whether you're too early or too late. This field does.",
       "properties": {
-        "direction":       { "type": "string", "enum": ["accelerating_fast", "accelerating", "flat", "cooling"] },
-        "evidence":        { "type": "string", "description": "Concrete observation — 'r/priorauth grew 3.2x (8K→26K subs) 2024-2026'" },
-        "trigger":         { "type": "string", "description": "What caused the acceleration — new API, regulation, cost crash, platform unlock" },
-        "window_months":   { "type": "integer", "description": "Estimated months of lead-time before mass competition enters" },
-        "freshness_date":  { "type": "string", "description": "YYYY-MM when this signal was last verified" }
+        "direction":       { "type": "string", "enum": ["accelerating_fast", "accelerating", "flat", "cooling"], "description": "accelerating_fast = rapid growth. accelerating = steady growth. flat = stable. cooling = shrinking." },
+        "evidence":        { "type": "string", "description": "Concrete observation with numbers and dates. For example: 'r/priorauth subscribers grew from 8,000 to 26,000 between 2024 and 2026.'" },
+        "trigger":         { "type": "string", "description": "What's causing the growth: a new API launch, a new regulation, a cost collapse, a platform unlock." },
+        "window_months":   { "type": "integer", "description": "Estimated months of head start you have before mass competition enters this space." },
+        "freshness_date":  { "type": "string", "description": "Year-month (YYYY-MM) when this signal was last verified. Older than 6 months = stale." }
       }
     },
     "buying_intent_evidence": {
       "type": "array",
-      "description": "Quotes/threads where someone explicitly asks for a solution or says they'd pay. BUYING signals, not complaint signals. 'What should I use?' beats 'this sucks' 10:1.",
+      "description": "Quotes and threads where someone actively signals they want a solution or will pay for one. Different from generic complaint evidence. 'What should I use?' is a buying signal. 'This sucks' is not.",
       "items": {
         "type": "object",
         "required": ["quote", "intent_type", "source_url"],
         "properties": {
           "quote":        { "type": "string" },
-          "intent_type":  { "type": "string", "enum": ["asking_recommendation", "actively_evaluating", "willing_to_pay_stated", "churning_from_incumbent", "waitlist_signal", "funding_announcement"] },
+          "intent_type":  { "type": "string", "enum": ["asking_recommendation", "actively_evaluating", "willing_to_pay_stated", "churning_from_incumbent", "waitlist_signal", "funding_announcement"], "description": "asking_recommendation = 'what should I use'. actively_evaluating = comparing specific tools. willing_to_pay_stated = explicit budget mention. churning_from_incumbent = switching away from a current tool. waitlist_signal = signed up for beta. funding_announcement = investor money flowing into the category." },
           "source_url":   { "type": "string", "format": "uri" },
           "source_label": { "type": "string" },
           "date":         { "type": "string" }
@@ -180,34 +180,34 @@
     },
     "kill_risks": {
       "type": "array",
-      "description": "The 3-5 things that would have to be true for this NOT to work. If any are already true, walk away.",
+      "description": "Three to five things that could kill this idea. Each with a severity level and current status. If any 'kill' risk is already active, walk away.",
       "items": {
         "type": "object",
         "required": ["risk", "severity", "current_status"],
         "properties": {
-          "risk":           { "type": "string", "description": "What could kill this" },
-          "severity":       { "type": "string", "enum": ["kill", "serious", "manageable"] },
-          "current_status": { "type": "string", "description": "Is this risk active / dormant / resolved? Cite evidence if known." }
+          "risk":           { "type": "string", "description": "What specifically could kill this. An incumbent responding, a regulation changing, a platform shutting off an API, a core assumption being wrong." },
+          "severity":       { "type": "string", "enum": ["kill", "serious", "manageable"], "description": "kill = if true, the idea is dead. serious = a real threat that requires mitigation. manageable = factor it in and move on." },
+          "current_status": { "type": "string", "description": "Is this risk active right now, dormant, or resolved? Cite evidence when you can." }
         }
       }
     },
     "fermi_math_to_50k": {
       "type": "object",
-      "description": "Explicit arithmetic path from $0 to $50K MRR. If the math doesn't clear the bar, the entry should be cut.",
+      "description": "The arithmetic path from zero to $50,000 in monthly revenue, written out in the open. If the math does not clear the bar, the entry should be cut. The goal is to force every entry to answer whether it can become a real business, not just a viable complaint.",
       "properties": {
-        "reachable_som_firms":          { "type": "integer", "description": "Firms you could plausibly get in front of in year 1 — not TAM, not SAM. The real funnel entry." },
-        "expected_conversion_pct":      { "type": "number", "description": "Plausible paid-conversion rate. 1-3% is realistic for cold B2B; 0.3-1% for consumer." },
-        "anchor_price_usd_month":       { "type": "number", "description": "What you'd charge per account per month — anchored to incumbent pricing or value delivered." },
-        "paying_customers_for_50k":     { "type": "integer", "description": "Derived: 50000 / anchor_price_usd_month (rounded up)." },
-        "months_to_50k_at_realistic_pace": { "type": "integer" },
-        "verdict":                      { "type": "string", "enum": ["clears_bar", "tight_but_possible", "math_does_not_work"] },
-        "notes":                        { "type": "string" }
+        "reachable_som_firms":          { "type": "integer", "description": "How many target companies you could realistically get in front of in year one. Not the full market, not the 'serviceable' market, just the real top of your funnel." },
+        "expected_conversion_pct":      { "type": "number", "description": "Plausible rate of trials that become paying customers. For cold B2B SaaS, 1 to 3 percent is realistic. For consumer, 0.3 to 1 percent." },
+        "anchor_price_usd_month":       { "type": "number", "description": "What you would charge per account per month, in US dollars. Anchor this to what existing tools charge or to the dollar value you save the customer." },
+        "paying_customers_for_50k":     { "type": "integer", "description": "Simple division: $50,000 divided by your monthly price, rounded up." },
+        "months_to_50k_at_realistic_pace": { "type": "integer", "description": "Estimated months to hit $50,000 in monthly revenue at realistic conversion and growth rates." },
+        "verdict":                      { "type": "string", "enum": ["clears_bar", "tight_but_possible", "math_does_not_work"], "description": "clears_bar = the math works at conservative assumptions. tight_but_possible = the math works only with favorable assumptions. math_does_not_work = even with generous assumptions, you can't get there." },
+        "notes":                        { "type": "string", "description": "Short explanation of how you got the numbers above and what has to go right." }
       }
     },
     "tags": {
       "type": "array",
       "items": { "type": "string" },
-      "description": "Free-form tags (e.g. 'whatsapp', 'voice', 'b2b', 'smb', 'enterprise', 'regulated')"
+      "description": "Free-form tags. For example: 'whatsapp', 'voice', 'b2b', 'smb', 'enterprise', 'regulated'."
     }
   }
 }

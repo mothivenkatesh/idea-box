@@ -142,35 +142,56 @@ Zero-build. Single HTML file. Filter by vertical, workflow family, severity, wil
 
 <br>
 
-## Schema in plain English
+## What's in each entry
 
-Every entry in `data/pains-*.json` has these fields. No acronyms here — what it is and why you care:
+Every entry in `data/pains-*.json` has these fields. Plain English only: what it means and why it matters.
 
-| Field | Plain-English meaning | Why a builder cares |
+### Core fields (on every entry)
+
+| Field | What it means | Why a builder cares |
 |---|---|---|
 | `id` | Permanent ID like `PAIN-0001` | Stable reference across versions |
 | `title` | One-line pain in human language | The hook |
-| `vertical` | Industry label (e.g. "Device Repair", "Veterinary") | Filters out what you don't want to build in |
-| `workflow_family` | 1 of 7 operational patterns | Maps to the kind of agent you'd build |
-| `persona` | The specific buyer role — not a category | You have to know who you're calling |
-| `pain_description` | What breaks, in their words | The narrative that sells your pitch |
-| `pain_severity` | 1–10 — how painful | 10 = losing money or at regulatory risk |
-| `tedium_score` | 1–10 — how robotic the task is | 10 = pure data entry, prime AI replacement |
-| `frequency` | How often the pain happens | "Daily per shop" signals volume-priced pricing |
-| `tam_firms` | Estimated count of target firms | Bottom-up market sizing |
-| `tam_labor_spend_usd` | Annual labor spend in the category | Menlo's "labor budget, not IT budget" frame |
-| `tam_direction` | Growing, stable, or declining | Decides whether you're surfing or swimming |
-| `current_wtp_usd_month` | What they **already pay** to incumbents ($/month) | Anchors your pricing ceiling |
-| `incumbent_tools` | Competing SaaS tools today | Your competition |
-| `incumbent_gap` | Why today's tools fail them | Your wedge |
-| `santifer_pattern` | A one-line solution sketch | Starting point, not a spec |
+| `vertical` | Industry label (for example: "Device Repair", "Veterinary") | Filters out what you don't want to build in |
+| `workflow_family` | One of 7 kinds of operational work | Maps to the kind of agent you would build |
+| `persona` | The specific buyer role, not a category | You have to know who you are calling |
+| `pain_description` | What breaks, in the persona's words | The narrative that sells your pitch |
+| `pain_severity` | 1 to 10, how painful | 10 means losing money or triggering regulatory risk |
+| `tedium_score` | 1 to 10, how repetitive the task is | 10 is pure copy-paste data entry, prime AI replacement |
+| `frequency` | How often the pain happens | "Daily per shop" signals volume pricing |
+| `tam_firms` | Estimated count of target companies | Used for bottom-up market sizing |
+| `tam_labor_spend_usd` | Annual labor cost across this market, in US dollars | Frames the pain as a labor-budget opportunity, not an IT-budget one (Menlo Ventures framing) |
+| `tam_direction` | Growing, stable, or shrinking | Tells you whether you are surfing or swimming |
+| `current_wtp_usd_month` | What customers pay today to existing tools, per month in US dollars | Anchors your pricing ceiling |
+| `incumbent_tools` | Tools and SaaS products already serving this pain | Your competition |
+| `incumbent_gap` | Why today's tools fail these customers | Your wedge |
+| `santifer_pattern` | One-line solution sketch | Starting point, not a spec |
 | `sources` | Reddit threads, forums, reviews | Evidence, not opinion |
-| `verbatim_quotes` | Real user complaints pulled from those threads — quoted as written, with author handle + date | The hook that sells the pain: someone's actual words, not your paraphrase |
-| `reference_build` | A live implementation of the pattern (if any) | Proof it can be done |
-| `why_now` | What changed to make this buildable | The catalyst for today |
-| `opportunity_score` | Composite 0–100 signal | Sort on this, then read the details |
+| `verbatim_quotes` | Real user complaints pulled from those threads, quoted as written, with author handle and date | Someone's actual words, not your paraphrase |
+| `reference_build` | URL of an existing working example of this solution pattern, if one exists | Proof it can be done |
+| `why_now` | What changed recently that makes this buildable | The catalyst for today |
+| `opportunity_score` | Composite score from 0 to 100 | Sort on this, then read the details |
 
-*TAM = total addressable market · WTP = willingness to pay · SaaS = subscription software*
+### Decision-grade fields (on the top 50 entries, rolling out to others)
+
+Extra evidence that lets you decide whether to actually build. Every field is designed to answer one of four jobs: can I validate this, can I catch the trend early, can I avoid wasting 3 months, and can I reach $50,000 in monthly revenue?
+
+| Field | What it means |
+|---|---|
+| `specific_prospects` | Named people, companies, subreddits, Facebook groups, and associations you could contact today. For each: name, type, URL, how big, and how to reach them. |
+| `velocity_signal` | Is the pain growing, flat, or cooling? Includes concrete evidence (numbers, dates), the trigger (new API, regulation, cost drop), and your estimated head start before mass competition. |
+| `buying_intent_evidence` | Quotes where someone signals they actively want to pay. Typed as: asking for a recommendation, actively comparing tools, said they will pay, switching away from their current tool, signed up for a waitlist, or funding raised in the category. |
+| `kill_risks` | 3 to 5 things that could kill this idea, each tagged kill / serious / manageable with current status. |
+| `fermi_math_to_50k` | Arithmetic path to $50,000 in monthly revenue: realistic year-1 reach, signup rate, monthly price, customers needed, months, and verdict (math works / tight but possible / math does not work). |
+
+### A quick note on abbreviations
+
+Some fields keep shorthand in their JSON names for backward compatibility, but the browser UI always shows plain English:
+
+- `tam_firms` shows as "Target companies"
+- `tam_labor_spend_usd` shows as "Annual labor cost in this market"
+- `tam_direction` shows as "Market trend"
+- `current_wtp_usd_month` shows as "What they pay today"
 
 <br>
 

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#8247E5">
-<title>Pain DB — 1000 structured pain points</title>
+<title>idea-box · 1,000 structured pain points</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Inter:wght@400;450;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
@@ -1080,14 +1080,14 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-kicker"><i data-lucide="database"></i><span>Pain DB · 1,000-entry corpus</span></div>
-    <h1>Structured opportunity intelligence <span class="accent">for vertical AI.</span></h1>
-    <p class="hero-sub">Modeled after ideabrowser &amp; painonsocial. Every entry carries persona, pain, TAM, WTP, incumbents &amp; the gap incumbents leave.</p>
+    <div class="hero-kicker"><i data-lucide="database"></i><span>idea-box · 1,000 validated pain points</span></div>
+    <h1>1,000 pains with real users, <span class="accent">real money, and broken tools.</span></h1>
+    <p class="hero-sub">Every entry answers six questions a builder actually asks: who hurts, how badly, how many of them exist, what they pay today, why incumbents miss them, and why now.</p>
     <div class="hero-stats">
-      <span class="stat"><strong id="heroCount">—</strong>&nbsp;pain points</span>
-      <span class="stat"><strong id="heroValidated">50</strong>&nbsp;S-tier validated</span>
-      <span class="stat"><strong>24</strong>&nbsp;batches</span>
-      <span class="stat"><strong>7</strong>&nbsp;workflow families</span>
+      <span class="stat"><strong id="heroCount">...</strong>&nbsp;pain points</span>
+      <span class="stat"><strong id="heroValidated">50</strong>&nbsp;deeply validated</span>
+      <span class="stat"><strong>24</strong>&nbsp;industries</span>
+      <span class="stat"><strong>7</strong>&nbsp;types of work</span>
     </div>
   </div>
 </section>
@@ -1097,7 +1097,7 @@
     <div class="topbar-row">
       <div class="search">
         <span class="search-icon"><i data-lucide="search"></i></span>
-        <input id="q" type="search" autocomplete="off" placeholder="Search pain, vertical, persona…" />
+        <input id="q" type="search" autocomplete="off" placeholder="Search pain, industry, or who hurts..." />
         <button class="search-clear" id="qClear" type="button" aria-label="Clear search"><i data-lucide="x"></i></button>
       </div>
       <button class="filter-trigger" id="filterTrigger" type="button" aria-label="Open filters"><i data-lucide="sliders-horizontal"></i><span>Filters</span><span class="filter-count" id="filterCount">0</span></button>
@@ -1166,19 +1166,19 @@ const PAGE_SIZE = 10;
 let CURRENT_PAGE = 1;
 
 const FILTER_DEFS = [
-  { id:'sort',        label:'Sort',       icon:'arrow-down-wide-narrow', type:'radio', options:[
-      ['opportunity_score','Opportunity'],
-      ['pain_severity','Severity'],
-      ['tedium_score','Tedium'],
-      ['current_wtp_usd_month','WTP'],
-      ['tam_firms','TAM firms']
+  { id:'sort',        label:'Sort by',    icon:'arrow-down-wide-narrow', type:'radio', options:[
+      ['opportunity_score','Overall score'],
+      ['pain_severity','Pain level'],
+      ['tedium_score','How repetitive'],
+      ['current_wtp_usd_month','What customers pay today'],
+      ['tam_firms','Number of target companies']
     ], default:'opportunity_score' },
-  { id:'vertical',    label:'Vertical',   icon:'layers',              type:'dropdown', dynamic:true, all:'All verticals' },
-  { id:'workflow',    label:'Workflow',   icon:'git-branch',          type:'dropdown', dynamic:true, all:'All workflows' },
-  { id:'tamDir',      label:'TAM direction', icon:'trending-up',      type:'dropdown', dynamic:true, all:'Any direction' },
-  { id:'minSeverity', label:'Severity',   icon:'flame',               type:'radio',    options:[['0','Any'],['7','≥ 7'],['8','≥ 8'],['9','≥ 9'],['10','= 10']], default:'0' },
-  { id:'verdict',     label:'Verdict',    icon:'shield-check',        type:'radio',    options:[
-      ['','All'],['__validated__','Only S-tier'],
+  { id:'vertical',    label:'Industry',   icon:'layers',              type:'dropdown', dynamic:true, all:'All industries' },
+  { id:'workflow',    label:'Type of work', icon:'git-branch',        type:'dropdown', dynamic:true, all:'All types' },
+  { id:'tamDir',      label:'Market trend', icon:'trending-up',       type:'dropdown', dynamic:true, all:'Any trend' },
+  { id:'minSeverity', label:'Pain level', icon:'flame',               type:'radio',    options:[['0','Any'],['7','7 or higher'],['8','8 or higher'],['9','9 or higher'],['10','Exactly 10']], default:'0' },
+  { id:'verdict',     label:'Investor-grade check', icon:'shield-check', type:'radio', options:[
+      ['','All entries'],['__validated__','Only top 50 (S-tier)'],
       ['Strong signal','Strong signal'],['Conditional pass','Conditional pass'],
       ['Fragile','Fragile'],['Weak','Weak']
     ], default:'' }
@@ -1190,6 +1190,26 @@ const state = { ...DEFAULTS };
 const VERDICT_ICON = {
   'Strong signal':'badge-check', 'Conditional pass':'circle-check',
   'Fragile':'triangle-alert',    'Weak':'circle-x'
+};
+
+const WORKFLOW_LABEL = {
+  intake: 'Intake (first contact)',
+  triage_routing: 'Triage and routing',
+  extraction_validation: 'Extraction and validation',
+  outbound_followup: 'Outbound and follow-up',
+  transactional_action: 'Transactional action',
+  compliance_audit: 'Compliance and audit',
+  synthesis_reporting: 'Synthesis and reporting',
+  full_lifecycle: 'Full lifecycle (end to end)'
+};
+
+const TAM_DIRECTION_LABEL = {
+  'rapidly-growing': 'Growing fast',
+  'growing': 'Growing',
+  'stable-growing': 'Stable, slowly growing',
+  'stable': 'Stable',
+  'stable-declining': 'Stable, slowly shrinking',
+  'declining': 'Shrinking'
 };
 
 function esc(s) { if (s == null) return ''; return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
@@ -1470,9 +1490,9 @@ function render() {
         <p class="card-persona"><i data-lucide="user"></i>${esc(p.persona||'—')}</p>
         <p class="card-desc">${esc(p.pain_description||'')}</p>
         <div class="card-meta">
-          <span class="kv-chip"><i data-lucide="flame"></i>Sev <strong>${p.pain_severity||'?'}</strong></span>
-          <span class="kv-chip"><i data-lucide="dollar-sign"></i><strong>${wtp}</strong></span>
-          <span class="kv-chip"><i data-lucide="building-2"></i><strong>${firms}</strong></span>
+          <span class="kv-chip" title="How painful this is (1–10)"><i data-lucide="flame"></i>Pain <strong>${p.pain_severity||'?'}</strong></span>
+          <span class="kv-chip" title="What these customers pay today, per month"><i data-lucide="dollar-sign"></i><strong>${wtp}</strong>/mo</span>
+          <span class="kv-chip" title="Estimated number of target companies"><i data-lucide="building-2"></i><strong>${firms}</strong> firms</span>
           ${v ? `<span class="pill ${verdictPill(v.verdict)}"><i data-lucide="${verdictIcon}"></i>${esc(v.verdict)}</span>` : ''}
         </div>
       </article>
@@ -1538,25 +1558,25 @@ function openModal(p) {
   const linksList = arr => arr && arr.length ? arr.map(s => `<a href="${s}" target="_blank" rel="noopener">${esc(s)} <i data-lucide="external-link"></i></a>`).join('<br>') : '—';
 
   const baseRows = [
-    ['ID',              `<code style="font-family:'JetBrains Mono',monospace;font-size:12px">${p.id}</code>`],
-    ['Workflow',        p.workflow_family || '—'],
-    ['Persona',         p.persona || '—'],
-    ['Pain',            p.pain_description || '—'],
-    ['Frequency',       p.frequency || '—'],
-    ['Severity',        `<strong>${p.pain_severity||'?'}</strong> / 10`],
-    ['Tedium',          `<strong>${p.tedium_score||'?'}</strong> / 10`],
-    ['Opportunity',     `<strong>${p.opportunity_score||'?'}</strong> / 100`],
-    ['TAM firms',       p.tam_firms ? p.tam_firms.toLocaleString() : '—'],
-    ['TAM labor spend', p.tam_labor_spend_usd ? '$' + (p.tam_labor_spend_usd/1e9).toFixed(2) + 'B' : '—'],
-    ['TAM direction',   p.tam_direction || '—'],
-    ['Current WTP',     p.current_wtp_usd_month ? `$${p.current_wtp_usd_month.toLocaleString()}/mo` : '—'],
-    ['Incumbent tools', chipList(p.incumbent_tools)],
-    ['Incumbent gap',   p.incumbent_gap || '—'],
-    ['Santifer pattern',p.santifer_pattern || '—'],
-    ['Why now',         p.why_now || '—'],
-    ['Reference',       p.reference_build ? `<a href="${p.reference_build}" target="_blank" rel="noopener">${esc(p.reference_build)} <i data-lucide="external-link"></i></a>` : '—'],
-    ['Sources',         linksList(p.sources)],
-    ['Tags',            chipList(p.tags)]
+    ['ID',                     `<code style="font-family:'JetBrains Mono',monospace;font-size:12px">${p.id}</code>`],
+    ['Type of work',           WORKFLOW_LABEL[p.workflow_family] || p.workflow_family || '—'],
+    ['Who hurts',              p.persona || '—'],
+    ['What hurts',             p.pain_description || '—'],
+    ['How often',              p.frequency || '—'],
+    ['How painful (1–10)',     `<strong>${p.pain_severity||'?'}</strong> / 10`],
+    ['How repetitive (1–10)',  `<strong>${p.tedium_score||'?'}</strong> / 10`],
+    ['Overall score (0–100)',  `<strong>${p.opportunity_score||'?'}</strong> / 100`],
+    ['Target companies',       p.tam_firms ? p.tam_firms.toLocaleString() : '—'],
+    ['Annual labor cost in this market', p.tam_labor_spend_usd ? '$' + (p.tam_labor_spend_usd/1e9).toFixed(2) + ' billion' : '—'],
+    ['Market trend',           TAM_DIRECTION_LABEL[p.tam_direction] || p.tam_direction || '—'],
+    ['What they pay today',    p.current_wtp_usd_month ? `$${p.current_wtp_usd_month.toLocaleString()}/month` : '—'],
+    ['Current tools they use', chipList(p.incumbent_tools)],
+    ['What\u2019s missing',    p.incumbent_gap || '—'],
+    ['Solution sketch',        p.santifer_pattern || '—'],
+    ['Why now',                p.why_now || '—'],
+    ['Live example',           p.reference_build ? `<a href="${p.reference_build}" target="_blank" rel="noopener">${esc(p.reference_build)} <i data-lucide="external-link"></i></a>` : '—'],
+    ['Evidence links',         linksList(p.sources)],
+    ['Tags',                   chipList(p.tags)]
   ];
 
   /* ---- JTBD fields: prospects, velocity, buying intent, kill risks, fermi ---- */
@@ -1568,22 +1588,22 @@ function openModal(p) {
   const hasJtbd = prospects.length || velocity || buying.length || risks.length || fermi;
 
   const VELOCITY_ICON = { accelerating_fast: 'rocket', accelerating: 'trending-up', flat: 'minus', cooling: 'trending-down' };
-  const VELOCITY_LABEL = { accelerating_fast: 'Accelerating fast', accelerating: 'Accelerating', flat: 'Flat', cooling: 'Cooling' };
+  const VELOCITY_LABEL = { accelerating_fast: 'Growing fast', accelerating: 'Growing', flat: 'Flat', cooling: 'Cooling down' };
   const INTENT_LABEL = {
-    asking_recommendation: 'Asking for recommendation',
-    actively_evaluating: 'Actively evaluating',
-    willing_to_pay_stated: 'WTP stated',
-    churning_from_incumbent: 'Churning from incumbent',
-    waitlist_signal: 'Waitlist signal',
-    funding_announcement: 'Funding announcement'
+    asking_recommendation: 'Asking for a recommendation',
+    actively_evaluating: 'Actively comparing tools',
+    willing_to_pay_stated: 'Said they will pay',
+    churning_from_incumbent: 'Switching away from current tool',
+    waitlist_signal: 'Signed up for waitlist',
+    funding_announcement: 'Funding raised in this space'
   };
   const VERDICT_FERMI_ICON = { clears_bar: 'badge-check', tight_but_possible: 'triangle-alert', math_does_not_work: 'circle-x' };
-  const VERDICT_FERMI_LABEL = { clears_bar: 'Clears the $50K MRR bar', tight_but_possible: 'Tight but possible', math_does_not_work: 'Math does not work' };
+  const VERDICT_FERMI_LABEL = { clears_bar: 'Math works (you can hit $50K per month)', tight_but_possible: 'Tight, but possible', math_does_not_work: 'Math does not work' };
 
   function renderProspects() {
     if (!prospects.length) return '';
     return `
-      <h3 class="section-title"><i data-lucide="users"></i>Specific prospects you could reach today <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${prospects.length}</span></h3>
+      <h3 class="section-title"><i data-lucide="users"></i>People and places you could reach today <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${prospects.length}</span></h3>
       <div class="jtbd-list">
         ${prospects.map(pr => {
           const typeCls = (pr.type || '').replace(/[^a-z_]/g, '');
@@ -1611,13 +1631,13 @@ function openModal(p) {
     const icon = VELOCITY_ICON[dir] || 'activity';
     const label = VELOCITY_LABEL[dir] || dir;
     return `
-      <h3 class="section-title"><i data-lucide="gauge"></i>Velocity signal</h3>
+      <h3 class="section-title"><i data-lucide="gauge"></i>Is this getting bigger?</h3>
       <div class="velocity-card ${dir}">
         <div class="velocity-head ${dir}"><i data-lucide="${icon}"></i>${esc(label)}</div>
         ${velocity.evidence ? `<div class="velocity-evidence">${esc(velocity.evidence)}</div>` : ''}
         <div class="velocity-meta">
-          ${velocity.trigger       ? `<span><span class="label">Trigger:</span> <strong>${esc(velocity.trigger)}</strong></span>` : ''}
-          ${velocity.window_months ? `<span><span class="label">Lead:</span> <strong>${esc(velocity.window_months)} mo</strong></span>` : ''}
+          ${velocity.trigger       ? `<span><span class="label">What's driving it:</span> <strong>${esc(velocity.trigger)}</strong></span>` : ''}
+          ${velocity.window_months ? `<span><span class="label">Head start:</span> <strong>${esc(velocity.window_months)} months before mass competition</strong></span>` : ''}
           ${velocity.freshness_date ? `<span><span class="label">Verified:</span> <strong>${esc(velocity.freshness_date)}</strong></span>` : ''}
         </div>
       </div>
@@ -1627,7 +1647,7 @@ function openModal(p) {
   function renderBuying() {
     if (!buying.length) return '';
     return `
-      <h3 class="section-title"><i data-lucide="shopping-cart"></i>Buying-intent signals <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${buying.length}</span></h3>
+      <h3 class="section-title"><i data-lucide="shopping-cart"></i>People who already want to pay <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${buying.length}</span></h3>
       <div class="jtbd-list">
         ${buying.map(b => {
           const t = (b.intent_type || '').replace(/[^a-z_]/g, '');
@@ -1651,7 +1671,7 @@ function openModal(p) {
     if (!risks.length) return '';
     const SEV_LETTER = { kill: 'K', serious: 'S', manageable: 'M' };
     return `
-      <h3 class="section-title"><i data-lucide="shield-alert"></i>Kill risks <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${risks.length}</span></h3>
+      <h3 class="section-title"><i data-lucide="shield-alert"></i>What could kill this <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);letter-spacing:.06em;text-transform:uppercase;font-weight:500">${risks.length}</span></h3>
       <div class="jtbd-list">
         ${risks.map(r => {
           const sev = (r.severity || 'manageable').replace(/[^a-z]/g, '');
@@ -1676,15 +1696,15 @@ function openModal(p) {
     const fmtPct = n => (n == null) ? '—' : `${n}%`;
     const fmtMoney = n => (n == null) ? '—' : `$${Number(n).toLocaleString()}`;
     return `
-      <h3 class="section-title"><i data-lucide="calculator"></i>Fermi math to $50K MRR</h3>
+      <h3 class="section-title"><i data-lucide="calculator"></i>Path to $50,000 per month</h3>
       <div class="fermi-card">
         ${v ? `<span class="fermi-verdict ${v}"><i data-lucide="${VERDICT_FERMI_ICON[v]||'circle'}"></i>${esc(VERDICT_FERMI_LABEL[v]||v)}</span>` : ''}
         <div class="fermi-grid">
-          <div class="fermi-metric"><span class="label">Reachable SOM</span><span class="value">${fmtNum(fermi.reachable_som_firms)} firms</span></div>
-          <div class="fermi-metric"><span class="label">Conv. rate</span><span class="value">${fmtPct(fermi.expected_conversion_pct)}</span></div>
-          <div class="fermi-metric"><span class="label">Anchor price</span><span class="value">${fmtMoney(fermi.anchor_price_usd_month)}/mo</span></div>
-          <div class="fermi-metric"><span class="label">Customers @ $50K</span><span class="value">${fmtNum(fermi.paying_customers_for_50k)}</span></div>
-          <div class="fermi-metric"><span class="label">Time to $50K</span><span class="value">${fermi.months_to_50k_at_realistic_pace ? fermi.months_to_50k_at_realistic_pace + ' mo' : '—'}</span></div>
+          <div class="fermi-metric"><span class="label">Realistic reach (year 1)</span><span class="value">${fmtNum(fermi.reachable_som_firms)} companies</span></div>
+          <div class="fermi-metric"><span class="label">Signup rate</span><span class="value">${fmtPct(fermi.expected_conversion_pct)}</span></div>
+          <div class="fermi-metric"><span class="label">Monthly price</span><span class="value">${fmtMoney(fermi.anchor_price_usd_month)}/mo</span></div>
+          <div class="fermi-metric"><span class="label">Customers needed</span><span class="value">${fmtNum(fermi.paying_customers_for_50k)}</span></div>
+          <div class="fermi-metric"><span class="label">Time to $50K/mo</span><span class="value">${fermi.months_to_50k_at_realistic_pace ? fermi.months_to_50k_at_realistic_pace + ' months' : 'not set'}</span></div>
         </div>
         ${fermi.notes ? `<div class="fermi-notes">${esc(fermi.notes)}</div>` : ''}
       </div>
@@ -1715,7 +1735,7 @@ function openModal(p) {
       <h3 class="section-title"><i data-lucide="quote"></i>Verbatim from the field</h3>
       <div class="quote-empty">
         <i data-lucide="message-square-plus"></i>
-        <span>No verbatim quotes yet. <a href="https://github.com/mothivenkatesh/idea-box/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute one</a> — paste a Reddit / forum / G2 quote that validates this pain.</span>
+        <span>No verbatim quotes yet. <a href="https://github.com/mothivenkatesh/idea-box/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute one</a>: paste a real Reddit, forum, or review quote that backs up this pain.</span>
       </div>
     `;
   }
@@ -1727,21 +1747,22 @@ function openModal(p) {
     const ls = v.layer_scores || {};
     const fmt = n => n ? `$${(n/1e9).toFixed(2)}B` : '—';
     const vRows = [
-      ['Idea type',     `${esc(v.idea_type||'')} · ${esc(v.stage||'')}`],
-      ['Rationale',     esc(v.verdict_rationale||'')],
-      ['TAM bottom-up', tam.bottom_up ? esc(tam.bottom_up.calc) + ' = ' + fmt(tam.bottom_up.value_usd) : '—'],
-      ['TAM value-based', tam.value_based ? esc(tam.value_based.calc) + ' = ' + fmt(tam.value_based.value_usd) : '—'],
-      ['TAM top-down',  tam.top_down ? esc(tam.top_down.calc) + ' = ' + fmt(tam.top_down.value_usd) : '—'],
-      ['SAM / SOM',     `${fmt(tam.sam_usd_mid)} / ${fmt(tam.som_usd_1pct)}`],
-      ['Convergence',   esc(tam.convergence||'—')],
-      ['Unit economics',`ACV <strong>$${(ue.acv_usd||0).toLocaleString()}</strong> · GM ${ue.assumed_gross_margin_pct||'?'}% · LTV $${(ue.derived_ltv_usd||0).toLocaleString()} · CAC $${(ue.target_cac_usd||0).toLocaleString()} · LTV:CAC ${ue.target_ltv_cac||'?'}:1 · Payback ${ue.implied_payback_mo||'?'}mo`],
-      ['Layer scores',  `Problem ${ls.problem_clarity||'?'} · Market ${ls.market_size||'?'} · Solution ${ls.solution_differentiation||'?'} · Unit-econ ${ls.unit_economics||'?'} · P&amp;L ${ls.pnl_viability||'?'} · Timing ${ls.market_timing_moat||'?'} · Exec ${ls.execution_kill_risk||'?'}`],
-      ['Raw total',     `<strong>${v.raw_total}/${v.max_possible}</strong> · normalized ${Math.round((v.raw_total||0)*40/(v.max_possible||1))}/40`],
-      ['Riskiest',      `<ul style="margin:0;padding-left:18px">${(v.riskiest_assumptions||[]).map(r => `<li>${esc(r)}</li>`).join('')}</ul>`]
+      ['Idea type',              `${esc(v.idea_type||'')} · ${esc(v.stage||'')}`],
+      ['Reason for verdict',     esc(v.verdict_rationale||'')],
+      ['Market size (bottom-up: firm count \u00d7 annual spend)', tam.bottom_up ? esc(tam.bottom_up.calc) + ' = ' + fmt(tam.bottom_up.value_usd) : 'not calculated'],
+      ['Market size (value-based: hours saved \u00d7 hourly cost)', tam.value_based ? esc(tam.value_based.calc) + ' = ' + fmt(tam.value_based.value_usd) : 'not calculated'],
+      ['Market size (top-down: existing category spend)',  tam.top_down ? esc(tam.top_down.calc) + ' = ' + fmt(tam.top_down.value_usd) : 'not calculated'],
+      ['Serviceable market size (you could plausibly reach)', fmt(tam.sam_usd_mid)],
+      ['Realistic 1% capture (your year-1 revenue ceiling)', fmt(tam.som_usd_1pct)],
+      ['Do the 3 estimates agree?', esc(tam.convergence||'not checked')],
+      ['Unit economics', `Annual contract value <strong>$${(ue.acv_usd||0).toLocaleString()}</strong> &middot; Gross margin ${ue.assumed_gross_margin_pct||'?'}% &middot; Lifetime value $${(ue.derived_ltv_usd||0).toLocaleString()} &middot; Customer acquisition cost $${(ue.target_cac_usd||0).toLocaleString()} &middot; LTV\u2009/\u2009CAC ratio ${ue.target_ltv_cac||'?'}:1 &middot; Payback ${ue.implied_payback_mo||'?'} months`],
+      ['Score breakdown (1\u20135 each)', `Problem clarity ${ls.problem_clarity||'?'} &middot; Market size ${ls.market_size||'?'} &middot; Solution differentiation ${ls.solution_differentiation||'?'} &middot; Unit economics ${ls.unit_economics||'?'} &middot; Business viability ${ls.pnl_viability||'?'} &middot; Timing &amp; moat ${ls.market_timing_moat||'?'} &middot; Execution risk ${ls.execution_kill_risk||'?'}`],
+      ['Total score',            `<strong>${v.raw_total}/${v.max_possible}</strong> &middot; normalized ${Math.round((v.raw_total||0)*40/(v.max_possible||1))}/40`],
+      ['Riskiest assumptions',   `<ul style="margin:0;padding-left:18px">${(v.riskiest_assumptions||[]).map(r => `<li>${esc(r)}</li>`).join('')}</ul>`]
     ];
     const iconName = VERDICT_ICON[v.verdict] || 'circle';
     validationHtml = `
-      <h3 class="section-title"><i data-lucide="scale"></i>AI-cofounder validation <span class="verdict-banner ${verdictBanner(v.verdict)}"><i data-lucide="${iconName}"></i>${esc(v.verdict)}</span></h3>
+      <h3 class="section-title"><i data-lucide="scale"></i>Investor-grade check <span class="verdict-banner ${verdictBanner(v.verdict)}"><i data-lucide="${iconName}"></i>${esc(v.verdict)}</span></h3>
       <table class="kv"><tbody>${vRows.map(([l,val]) => `<tr><th>${l}</th><td>${val||'—'}</td></tr>`).join('')}</tbody></table>
     `;
   }
